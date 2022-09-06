@@ -1,0 +1,62 @@
+#pragma once
+
+#include QMK_KEYBOARD_H
+
+#define XX KC_NO
+#define SPOTLHT LGUI(KC_SPC)
+#define OSM_MEH OSM(MOD_MEH)
+#define TD_HYMH TD(HYPR_MEH)
+#define LT_SMES LT(_SYMBOL, KC_ESC)
+#define TAB_NXT C(KC_TAB)
+#define TAB_PRV C(S(KC_TAB))
+#define MT_SFSP SFT_T(KC_SPC)
+#define LT_FUNC LT(_FUNC, KC_SPC)
+#define LT_SYEN LT(_SYSTEM, KC_ENT)
+
+enum keycodes {
+  MAC = SAFE_RANGE,
+  WINDOWS,
+#ifdef GAMING_ENABLE
+  GAMING,
+#endif
+  RAISE,
+#ifdef ART_ENABLE
+  ART,
+  ART2,
+#endif
+  FUNC,
+  FUNC2,
+#ifdef RGBLIGHT_LAYERS
+  LIGHTS,
+#endif
+  ADJUST,
+  PR_TTLE,
+#ifdef CASE_MODES_ENABLE
+  CAP_WRD,
+  CAMEL,
+  SNAKE,
+  KEBAB,
+  CST_CSE,
+#endif
+  DBL_EQ,
+  TRIP_EQ,
+  DBL_CLN,
+  OS_ALL,  // A
+  OS_COPY, // C
+  OS_FIND, // F
+  OS_RFRS, // R
+  OS_SAVE, // S
+  OS_CTAB, // W
+  OS_PSTE, // V
+  OS_CUT,  // X
+  OS_REDO, // Y
+  OS_UNDO, // Z
+  OS_SNIP,
+  VI_BWRD, // B
+  VI_VIS,  // V
+  VI_WORD, // W
+  VI_BSPC, // Backspace
+  VI_DEL,  // Delete
+  PERSONAL_SAFE_RANGE,
+};
+
