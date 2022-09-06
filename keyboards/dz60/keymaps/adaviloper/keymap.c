@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_ESC,  _________________NUMBER_L0_________________, _________________NUMBER_R0_________________, KC_MINS, KC_EQL,  KC_BSPC, KC_GRV,
   KC_TAB,  _________________QWERTY_L1_________________, _________________QWERTY_R1_________________, KC_LBRC, KC_RBRC, KC_BSLS,
   KC_DEL,  _________________QWERTY_L2_________________, _________________QWERTY_R2_________________, KC_QUOT, KC_ENT,
-  KC_LSFT, _________________QWERTY_L3_________________, _________________QWERTY_R3_________________, TD_HYMH, KC_UP,  LIGHTS,
+  KC_LSFT, _________________QWERTY_L3_________________, _________________QWERTY_R3_________________, OSM(MOD_HYPR), KC_UP,  LIGHTS,
   TD(CTL_NAV), OS_SNIP,  KC_LALT,   LT(_NAV_AND_MEDIA, KC_ENT),    TD(FN_CTL),   KC_SPC,     FUNC2,  OSM(MOD_LGUI | MOD_LALT),  KC_LEFT,  KC_DOWN,   KC_RGHT),
 
 /* Windows

@@ -5,7 +5,7 @@
 #define XX KC_NO
 #define SPOTLHT LGUI(KC_SPC)
 #define OSM_MEH OSM(MOD_MEH)
-#define TD_HYMH TD(HYPR_MEH)
+#define OSM_HYP OSM(MOD_HYPR)
 #define LT_SMES LT(_SYMBOL, KC_ESC)
 #define TAB_NXT C(KC_TAB)
 #define TAB_PRV C(S(KC_TAB))
@@ -37,6 +37,9 @@ enum keycodes {
   SNAKE,
   KEBAB,
   CST_CSE,
+#endif
+#ifdef GIT_ENABLE
+  GIT_ACP,
 #endif
   DBL_EQ,
   TRIP_EQ,
