@@ -26,20 +26,17 @@ bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
                 persistent_default_layer_set(1UL<<_MAC);
             }
             return false;
-            break;
         case WINDOWS:
             if (record->event.pressed) {
                 persistent_default_layer_set(1UL<<_WINDOWS);
             }
             return false;
-            break;
 #ifdef ART_ENABLE
         case ART:
             if (record->event.pressed) {
                 persistent_default_layer_set(1UL<<_ART);
             }
             return false;
-            break;
         case ART2:
             if (record->event.pressed) {
                 layer_on(_ART2);
@@ -47,7 +44,6 @@ bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
                 layer_off(_ART2);
             }
             return false;
-            break;
 #endif
 #ifdef GAMING_ENABLE
         case GAMING:
@@ -55,7 +51,6 @@ bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
                 persistent_default_layer_set(1UL<<_GAMING);
             }
             return false;
-            break;
 #endif
         case RAISE:
             if (record->event.pressed) {
@@ -66,7 +61,6 @@ bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
                 update_tri_layer(_SYMBOL, _RAISE, _ADJUST);
             }
             return false;
-            break;
         case FUNC:
             if (record->event.pressed) {
                 layer_on(_FUNC);
@@ -76,7 +70,6 @@ bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
                 update_tri_layer(_FUNC, _FUNC2, _ADJUST);
             }
             return false;
-            break;
         case FUNC2:
             if (record->event.pressed) {
                 layer_on(_FUNC2);
@@ -86,7 +79,6 @@ bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
                 update_tri_layer(_FUNC, _FUNC2, _ADJUST);
             }
             return false;
-            break;
         case ADJUST:
             if (record->event.pressed) {
                 layer_on(_ADJUST);
@@ -94,7 +86,6 @@ bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
                 layer_off(_ADJUST);
             }
             return false;
-            break;
 #ifdef RGBLIGHT_ENABLE
         case LIGHTS:
             if (record->event.pressed) {
@@ -103,7 +94,6 @@ bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
                 layer_off(_LIGHTS);
             }
             return false;
-            break;
 #endif
         case PR_TTLE:
             if (record->event.pressed) {
@@ -125,57 +115,48 @@ bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
             }
             // Task/gn XXXXX/some description
             return false;
-            break;
 #ifdef CASE_MODES_ENABLE
         case CAP_WRD:
             if (record->event.pressed) {
                 enable_caps_word();
             }
             return false;
-            break;
         case CAMEL:
             if (record->event.pressed) {
                 enable_xcase_with(OSM(MOD_LSFT));
             }
             return false;
-            break;
         case SNAKE:
             if (record->event.pressed) {
                 enable_xcase_with(KC_UNDS);
             }
             return false;
-            break;
         case KEBAB:
             if (record->event.pressed) {
                 enable_xcase_with(KC_MINS);
             }
             return false;
-            break;
         case CST_CSE:
             if (record->event.pressed) {
                 enable_xcase();
             }
             return false;
-            break;
 #endif // CASE_MODES_ENABLE
         case DBL_EQ:
             if (record->event.pressed) {
                 SEND_STRING("==");
             }
             return false;
-            break;
         case TRIP_EQ:
             if (record->event.pressed) {
                 SEND_STRING("===");
             }
             return false;
-            break;
         case DBL_CLN:
             if (record->event.pressed) {
                 SEND_STRING("::");
             }
             return false;
-            break;
     }
     return true;
 }

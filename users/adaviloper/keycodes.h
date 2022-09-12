@@ -40,6 +40,9 @@ enum keycodes {
 #endif
 #ifdef GIT_ENABLE
   GIT_ACP,
+  GIT_BCK,
+  GIT_HRD,
+  GIT_SFT,
 #endif
   DBL_EQ,
   TRIP_EQ,
