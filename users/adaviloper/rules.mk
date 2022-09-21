@@ -13,6 +13,9 @@ endif
 ifdef ENCODER_ENABLE
   SRC += encoders.c
 endif
+ifdef GIT_ENABLE
+  SRC += git.c
+endif
 ifeq ($(strip $(RGBLIGHT_ENABLE)), yes)
     SRC += rgblight_layers.c
 endif

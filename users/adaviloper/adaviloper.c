@@ -17,6 +17,9 @@ bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
 #ifdef CASE_MODES_ENABLE
     if (!process_case_modes(keycode, record)) { return false; }
 #endif
+#ifdef GIT_ENABLE
+    if (!process_git_adaviloper(keycode, record)) { return false; }
+#endif
     if (!process_os_commands_adaviloper(keycode, record)) { return false; };
     if (!process_vi_commands_adaviloper(keycode, record)) { return false; };
     mod_state = get_mods();

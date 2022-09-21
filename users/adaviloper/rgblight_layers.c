@@ -11,8 +11,8 @@
 
 const rgblight_segment_t PROGMEM mac_rgb_layer[] = RGBLIGHT_LAYER_SEGMENTS(
     {MAIN_UNDERGLOW_START,  UNDERGLOW_LED_PER_HALF, 0, 0, 255},
-    {SPLIT_UNDERGLOW_START, UNDERGLOW_LED_PER_HALF, 0, 0, 255},
-    {SPLIT_PER_KEY_START + 12, 4, 85, 255, 255} // VIM
+    {SPLIT_UNDERGLOW_START, UNDERGLOW_LED_PER_HALF, 0, 0, 255}
+//    {SPLIT_PER_KEY_START + 12, 4, 85, 255, 255} // VIM
 );
 const rgblight_segment_t PROGMEM windows_rgb_layer[] = RGBLIGHT_LAYER_SEGMENTS(
 //    {0, 7, 140, 255, 255},
@@ -22,8 +22,8 @@ const rgblight_segment_t PROGMEM windows_rgb_layer[] = RGBLIGHT_LAYER_SEGMENTS(
 #ifdef GAMING_ENABLE
 const rgblight_segment_t PROGMEM gaming_rgb_layer[] = RGBLIGHT_LAYER_SEGMENTS(
     {MAIN_UNDERGLOW_START,  UNDERGLOW_LED_PER_HALF, 85, 255, 255},
-    {MAIN_PER_KEY_START + 8,  1, 21, 255, 255},
-    {MAIN_PER_KEY_START + 14,  3, 21, 255, 255},
+//    {MAIN_PER_KEY_START + 8,  1, 21, 255, 255},
+//    {MAIN_PER_KEY_START + 14,  3, 21, 255, 255},
     {SPLIT_UNDERGLOW_START, UNDERGLOW_LED_PER_HALF, 85, 255, 255}
 );
 #endif

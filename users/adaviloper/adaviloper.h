@@ -18,6 +18,9 @@
 #ifdef ENCODER_ENABLE
     #include "encoders.h"
 #endif
+#ifdef GIT_ENABLE
+    #include "git.h"
+#endif
 #ifdef RGBLIGHT_LAYERS
     #include "rgblight_layers.h"
 #endif

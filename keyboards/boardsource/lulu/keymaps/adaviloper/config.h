@@ -14,3 +14,25 @@
 #if !defined(NO_PRINT) && !defined(CONSOLE_ENABLE)
 #define NO_PRINT
 #endif // !NO_PRINT
+
+#ifdef RGBLIGHT_ENABLE
+#    undef RGBLIGHT_ANIMATIONS
+#    define RGBLIGHT_HUE_STEP 6 // number of steps to cycle through the hue by
+#    define RGBLIGHT_SAT_STEP 6 // number of steps to increment the saturation by
+#    define RGBLIGHT_VAL_STEP 6 // number of steps to increment the brightness by
+#    define RGBLIGHT_SLEEP //  the RGB lighting will be switched off when the host goes to sleep
+#    define RGBLIGHT_SPLIT
+#endif
+#define NO_MUSIC_MODE
+
+// If you are using an Elite C rev3 on the slave side, uncomment the lines below:
+#define RGBLIGHT_EFFECT_RAINBOW_MOOD
+#define RGBLIGHT_EFFECT_RAINBOW_SWIRL
+#define ENABLE_RGB_MATRIX_RAINBOW_MOVING_CHEVRON
+#define ENABLE_RGB_MATRIX_RAINBOW_BEACON
+#define ENABLE_RGB_MATRIX_RAINBOW_PINWHEELS
+#define ENABLE_RGB_MATRIX_SPLASH
+#define ENABLE_RGB_MATRIX_MULTISPLASH
+#define ENABLE_RGB_MATRIX_SOLID_SPLASH
+#define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
+
