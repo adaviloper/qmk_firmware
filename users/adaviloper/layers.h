@@ -24,7 +24,3 @@ enum layers {
 };
 
 uint16_t current_default_layer_adaviloper;
-
-uint16_t get_current_default_layer(void);
-void set_default_layer(uint16_t layer);
-

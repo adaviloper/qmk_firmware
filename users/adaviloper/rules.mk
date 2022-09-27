@@ -1,5 +1,4 @@
 SRC += adaviloper.c
-SRC += layers.c
 
 ifeq ($(strip $(AUTO_SHIFT_ENABLE)), yes)
     SRC += auto_shift.c

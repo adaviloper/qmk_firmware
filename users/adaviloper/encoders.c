@@ -9,9 +9,9 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
     if (highest_layer == _RAISE) { // on Raise layer
       // Cursor control
       if (clockwise) {
-          tap_code(KC_MNXT);
-      } else {
           tap_code(KC_MPRV);
+      } else {
+          tap_code(KC_MNXT);
       }
     }
 #ifdef ART_ENABLE
@@ -25,9 +25,9 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 #endif
     else {
       if (clockwise) {
-          tap_code(KC_KB_VOLUME_UP);
-      } else {
           tap_code(KC_KB_VOLUME_DOWN);
+      } else {
+          tap_code(KC_KB_VOLUME_UP);
       }
     }
   }
@@ -35,22 +35,22 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
     if(IS_LAYER_ON(_SYMBOL)) { // on Lower layer
       //
       if (clockwise) {
-          tap_code(KC_VOLD);
-      } else {
           tap_code(KC_VOLU);
+      } else {
+          tap_code(KC_VOLD);
       }
     }
     else {
       if (clockwise) {
           register_code(KC_LCTL);
-          tap_code(KC_TAB);
-          unregister_code(KC_LCTL);
-      } else {
-          register_code(KC_LCTL);
           register_code(KC_LSFT);
           tap_code(KC_TAB);
           unregister_code(KC_LCTL);
           unregister_code(KC_LSFT);
+      } else {
+          register_code(KC_LCTL);
+          tap_code(KC_TAB);
+          unregister_code(KC_LCTL);
       }
     }
   }
