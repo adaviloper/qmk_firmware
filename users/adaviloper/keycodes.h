@@ -41,6 +41,7 @@ enum keycodes {
 #ifdef GIT_ENABLE
   GIT_ACP,
   GIT_BCK,
+  GIT_GCP,
   GIT_HRD,
   GIT_SFT,
 #endif
@@ -50,9 +51,11 @@ enum keycodes {
   OS_ALL,  // A
   OS_COPY, // C
   OS_FIND, // F
+  OS_SPEC, // Inspector
   OS_URL,  // L
   OS_RFRS, // R
   OS_SAVE, // S
+  OS_TAB,  // T
   OS_CTAB, // W
   OS_PSTE, // V
   OS_CUT,  // X
