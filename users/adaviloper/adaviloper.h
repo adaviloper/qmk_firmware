@@ -11,6 +11,7 @@
 #endif
 #ifdef CASE_MODES_ENABLE
     #include "case_modes.h"
+    #include "caps_mock.h"
 #endif
 #ifdef COMBO_ENABLE
     #include "combos.h"

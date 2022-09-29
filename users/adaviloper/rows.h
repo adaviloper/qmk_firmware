@@ -68,7 +68,7 @@
 #define _________________SYSTEM_R0_________________                   _______, _______, _______, _______, _______
 #define _________________SYSTEM_R1_________________                   OS_REDO, _______, _______, _______, _______
 #define _________________SYSTEM_R2_________________                   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______
-#define _________________SYSTEM_R3_________________                   _______, CAP_WRD, CAMEL,   SNAKE,   KEBAB
+#define _________________SYSTEM_R3_________________                   KC_MOCK, CAP_WRD, CAMEL,   SNAKE,   KEBAB
 
 #define _________________MAC_L1____________________                   _________________QWERTY_L1_________________
 #define _________________MAC_L2____________________                   SFT_T(KC_A),  GUI_T(KC_S),  CTL_T(KC_D),  ALT_T(KC_F),  LT(_GIT, KC_G)

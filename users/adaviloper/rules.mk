@@ -5,6 +5,7 @@ ifeq ($(strip $(AUTO_SHIFT_ENABLE)), yes)
 endif
 ifdef CASE_MODES_ENABLE
   SRC += case_modes.c
+  SRC += caps_mock.c
 endif
 ifdef COMBO_ENABLE
   SRC += combos.c

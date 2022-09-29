@@ -32,6 +32,7 @@ enum keycodes {
   ADJUST,
   PR_TTLE,
 #ifdef CASE_MODES_ENABLE
+  KC_MOCK,
   CAP_WRD,
   CAMEL,
   SNAKE,

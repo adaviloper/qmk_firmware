@@ -15,6 +15,7 @@ bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
     //  uint8_t default_layer = eeconfig_read_default_layer();
 #ifdef CASE_MODES_ENABLE
     if (!process_case_modes(keycode, record)) { return false; }
+    if (!process_caps_mock_adaviloper(keycode, record)) { return false; };
 #endif
 #ifdef GIT_ENABLE
     if (!process_git_adaviloper(keycode, record)) { return false; }
@@ -118,6 +119,11 @@ bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
             // Task/gn XXXXX/some description
             return false;
 #ifdef CASE_MODES_ENABLE
+        case KC_MOCK:
+            if (record->event.pressed) {
+                enable_caps_mock();
+            }
+            return false;
         case CAP_WRD:
             if (record->event.pressed) {
                 enable_caps_word();
