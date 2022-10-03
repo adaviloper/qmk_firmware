@@ -22,6 +22,9 @@
 #ifdef GIT_ENABLE
     #include "git.h"
 #endif
+#ifdef OLED_ENABLE
+    #include "oled.h"
+#endif
 #ifdef RGBLIGHT_LAYERS
     #include "rgblight_layers.h"
 #endif

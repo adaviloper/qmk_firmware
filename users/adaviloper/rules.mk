@@ -16,6 +16,9 @@ endif
 ifdef GIT_ENABLE
   SRC += git.c
 endif
+ifdef OLED_ENABLE
+  SRC += oled.c
+endif
 ifeq ($(strip $(RGBLIGHT_ENABLE)), yes)
     SRC += rgblight_layers.c
 endif

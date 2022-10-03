@@ -47,7 +47,7 @@ const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
     [_ADJUST] = adjust_rgb_layer
 );
 
-void keyboard_post_init_user(void) {
+void keyboard_post_init_kb(void) {
     // Enable the LED layers
     rgblight_layers = my_rgb_layers;
 }

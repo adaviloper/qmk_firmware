@@ -115,7 +115,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 SEND_STRING("make boardsource/lulu/rp2040:adaviloper");
                 tap_code(KC_ENT);
             }
-            break;
+            return false;
     };
     return true;
 }
