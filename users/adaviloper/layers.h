@@ -22,5 +22,3 @@ enum layers {
   _LIGHTS
 #endif
 };
-
-uint16_t current_default_layer_adaviloper;

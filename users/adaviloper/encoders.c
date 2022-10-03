@@ -17,9 +17,9 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 #ifdef ART_ENABLE
     else if (highest_layer == _ART) {
       if (clockwise) {
-          tap_code(KC_RBRC);
-      } else {
           tap_code(KC_LBRC);
+      } else {
+          tap_code(KC_RBRC);
       }
     }
 #endif
@@ -42,15 +42,9 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
     }
     else {
       if (clockwise) {
-          register_code(KC_LCTL);
-          register_code(KC_LSFT);
-          tap_code(KC_TAB);
-          unregister_code(KC_LCTL);
-          unregister_code(KC_LSFT);
+          tap_code16(C(S(KC_TAB)));
       } else {
-          register_code(KC_LCTL);
-          tap_code(KC_TAB);
-          unregister_code(KC_LCTL);
+          tap_code16(C(KC_TAB));
       }
     }
   }
