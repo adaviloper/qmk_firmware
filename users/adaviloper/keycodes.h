@@ -64,7 +64,6 @@ enum keycodes {
   OS_UNDO, // Z
   OS_SNIP,
   VI_BWRD, // B
-  VI_VIS,  // V
   VI_WORD, // W
   VI_BSPC, // Backspace
   VI_DEL,  // Delete

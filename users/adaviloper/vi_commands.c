@@ -4,51 +4,42 @@
 
 #include QMK_KEYBOARD_H
 
+void process_vi_keycode(uint16_t keycode, keyrecord_t *record) {
+    if (record->event.pressed) {
+        register_code16(keycode);
+    } else {
+        unregister_code16(keycode);
+    }
+}
+
 bool process_vi_commands_adaviloper(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case VI_BWRD:
-            if (record->event.pressed) {
-                if (eeconfig_read_default_layer() == 1UL<<_MAC) {
-                    tap_code16(A(KC_LEFT));
-                } else {
-                    tap_code16(C(KC_LEFT));
-                }
-            }
-            return false;
-        case VI_VIS:
-            if (record->event.pressed) {
-                if (eeconfig_read_default_layer() == 1UL<<_MAC) {
-                    tap_code16(A(KC_RGHT));
-                } else {
-                    tap_code16(C(KC_RGHT));
-                }
+            if (eeconfig_read_default_layer() == 1UL<<_MAC) {
+                process_vi_keycode(A(KC_LEFT), record);
+            } else {
+                process_vi_keycode(C(KC_LEFT), record);
             }
             return false;
         case VI_WORD:
-            if (record->event.pressed) {
-                if (eeconfig_read_default_layer() == 1UL<<_MAC) {
-                    tap_code16(A(KC_RGHT));
-                } else {
-                    tap_code16(C(KC_RGHT));
-                }
+            if (eeconfig_read_default_layer() == 1UL<<_MAC) {
+                process_vi_keycode(A(KC_RGHT), record);
+            } else {
+                process_vi_keycode(C(KC_RGHT), record);
             }
             return false;
         case VI_BSPC:
-            if (record->event.pressed) {
-                if (eeconfig_read_default_layer() == 1UL<<_MAC) {
-                    tap_code16(A(KC_BSPC));
-                } else {
-                    tap_code16(C(KC_BSPC));
-                }
+            if (eeconfig_read_default_layer() == 1UL<<_MAC) {
+                process_vi_keycode(A(KC_BSPC), record);
+            } else {
+                process_vi_keycode(C(KC_BSPC), record);
             }
             return false;
         case VI_DEL:
-            if (record->event.pressed) {
-                if (eeconfig_read_default_layer() == 1UL<<_MAC) {
-                    tap_code16(A(KC_DEL));
-                } else {
-                    tap_code16(C(KC_DEL));
-                }
+            if (eeconfig_read_default_layer() == 1UL<<_MAC) {
+                process_vi_keycode(A(KC_DEL), record);
+            } else {
+                process_vi_keycode(C(KC_DEL), record);
             }
             return false;
     }

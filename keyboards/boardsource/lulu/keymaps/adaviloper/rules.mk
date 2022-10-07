@@ -9,6 +9,7 @@ RGBLIGHT_ENABLE = yes
 RGB_MATRIX_ENABLE = no
 SPACE_CADET_ENABLE = no
 TAP_DANCE_ENABLE = yes
+WPM_ENABLE = yes
 
 # userspace rules
 ART_ENABLE = yes
