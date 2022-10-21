@@ -4,6 +4,14 @@
 
 #include QMK_KEYBOARD_H
 
+void register_os_keycode(uint16_t keycode, keyrecord_t *record) {
+    if (record->event.pressed) {
+        register_code16(keycode);
+    } else {
+        unregister_code16(keycode);
+    }
+}
+
 bool process_os_commands_adaviloper(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case OS_ALL:
@@ -106,21 +114,17 @@ bool process_os_commands_adaviloper(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
         case OS_REDO:
-            if (record->event.pressed) {
-                if (eeconfig_read_default_layer() == 1UL<<_MAC) {
-                    tap_code16(G(S(KC_Z)));
-                } else {
-                    tap_code16(C(KC_Y));
-                }
+            if (eeconfig_read_default_layer() == 1UL<<_MAC) {
+                register_os_keycode(G(S(KC_Z)), record);
+            } else {
+                register_os_keycode(C(KC_Y), record);
             }
             return false;
         case OS_UNDO:
-            if (record->event.pressed) {
-                if (eeconfig_read_default_layer() == 1UL<<_MAC) {
-                    tap_code16(G(KC_Z));
-                } else {
-                    tap_code16(C(KC_Z));
-                }
+            if (eeconfig_read_default_layer() == 1UL<<_MAC) {
+                register_os_keycode(G(KC_Z), record);
+            } else {
+                register_os_keycode(C(KC_Z), record);
             }
             return false;
         case OS_SNIP:
