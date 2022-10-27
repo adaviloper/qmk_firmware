@@ -46,16 +46,16 @@
 #define ______________MAC_R_HOME_ROW_______________      MAC_R_INDEX_2, MAC_R_INDEX_1, MAC_R_MIDDLE, MAC_R_RING, MAC_R_PINKY
 
 #define WIN_L_PINKY         MAC_L_PINKY
-#define WIN_L_RING          GUI_T(L_RING_KEYCODE)
-#define WIN_L_MIDDLE        CTL_T(L_MIDDLE_KEYCODE)
+#define WIN_L_RING          CTL_T(L_RING_KEYCODE)
+#define WIN_L_MIDDLE        GUI_T(L_MIDDLE_KEYCODE)
 #define WIN_L_INDEX_1       MAC_L_INDEX_1
 #define WIN_L_INDEX_2       L_INDEX_2_KEYCODE
 
 #define WIN_R_INDEX_2       R_INDEX_2_KEYCODE
-#define WIN_R_INDEX_1       ALT_T(R_INDEX_1_KEYCODE)
-#define WIN_R_MIDDLE        CTL_T(R_MIDDLE_KEYCODE)
-#define WIN_R_RING          GUI_T(R_RING_KEYCODE)
-#define WIN_R_PINKY         R_PINKY_KEYCODE
+#define WIN_R_INDEX_1       MAC_R_INDEX_1
+#define WIN_R_MIDDLE        GUI_T(R_MIDDLE_KEYCODE)
+#define WIN_R_RING          CTL_T(R_RING_KEYCODE)
+#define WIN_R_PINKY         MAC_R_PINKY
 
 #define ______________WIN_L_HOME_ROW_______________      WIN_L_PINKY, WIN_L_RING, WIN_L_MIDDLE, WIN_L_INDEX_1, WIN_L_INDEX_2
 #define ______________WIN_R_HOME_ROW_______________      WIN_R_INDEX_2, WIN_R_INDEX_1, WIN_R_MIDDLE, WIN_R_RING, WIN_R_PINKY
