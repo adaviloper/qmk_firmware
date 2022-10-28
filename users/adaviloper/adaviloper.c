@@ -13,7 +13,6 @@ void persistent_default_layer_set(uint16_t default_layer) {
 uint8_t mod_state;
 bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
     // Store the current modifier state in the variable for later reference
-    //  uint8_t default_layer = eeconfig_read_default_layer();
 #ifdef CASE_MODES_ENABLE
     if (!process_case_modes(keycode, record)) { return false; }
     if (!process_caps_mock_adaviloper(keycode, record)) { return false; };
