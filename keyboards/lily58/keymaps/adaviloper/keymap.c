@@ -7,6 +7,38 @@ enum lily58_keycodes {
     KC_MAKE = PERSONAL_SAFE_RANGE,
 };
 
+#define LAYOUT_lulu_wrapper(...) LAYOUT(__VA_ARGS__)
+#define LAYOUT_lulu_base_mac( \
+        k00, k01, k02, k03, k04, k05,           k08, k09, k0a, k0b, k0c, k0d, \
+        k10, k11, k12, k13, k14, k15,           k18, k19, k1a, k1b, k1c, k1d, \
+        k20, k21, k22, k23, k24, k25,           k28, k29, k2a, k2b, k2c, k2d, \
+        k30, k31, k32, k33, k34, k35, k36, k37, k38, k39, k3a, k3b, k3c, k3d, \
+                       k43, k44, k45, k46, k47, k48, k49, k4a \
+    ) \
+    LAYOUT_lulu_wrapper( \
+        k00, k01, k02, k03, k04, k05,           k08, k09, k0a, k0b, k0c, k0d, \
+        k10, k11, k12, k13, k14, k15,           k18, k19, k1a, k1b, k1c, k1d, \
+        k20, SFT_T(k21), GUI_T(k22), CTL_T(k23), ALT_T(k24), LT(_GIT, k25),   LT(_GIT, k28), ALT_T(k29), CTL_T(k2a), GUI_T(k2b), SFT_T(k2c), k2d, \
+        k30, k31, k32, k33, k34, k35, k36, k37, k38, k39, k3a, k3b, k3c, k3d, \
+                       k43, k44, k45, k46, k47, k48, k49, k4a \
+    )
+#define LAYOUT_lulu_base_win( \
+        k00, k01, k02, k03, k04, k05,           k08, k09, k0a, k0b, k0c, k0d, \
+        k10, k11, k12, k13, k14, k15,           k18, k19, k1a, k1b, k1c, k1d, \
+        k20, k21, k22, k23, k24, k25,           k28, k29, k2a, k2b, k2c, k2d, \
+        k30, k31, k32, k33, k34, k35, k36, k37, k38, k39, k3a, k3b, k3c, k3d, \
+                       k43, k44, k45, k46, k47, k48, k49, k4a \
+    ) \
+    LAYOUT_lulu_wrapper( \
+        k00, k01, k02, k03, k04, k05,           k08, k09, k0a, k0b, k0c, k0d, \
+        k10, k11, k12, k13, k14, k15,           k18, k19, k1a, k1b, k1c, k1d, \
+        k20, SFT_T(k21), CTL_T(k22), GUI_T(k23), ALT_T(k24), LT(_GIT, k25),   LT(_GIT, k28), ALT_T(k29), GUI_T(k2a), CTL_T(k2b), SFT_T(k2c), k2d, \
+        k30, k31, k32, k33, k34, k35, k36, k37, k38, k39, k3a, k3b, k3c, k3d, \
+                       k43, k44, k45, k46, k47, k48, k49, k4a \
+    )
+#define LAYOUT_base_mac_wrapper(...) LAYOUT_lulu_base_mac(__VA_ARGS__)
+#define LAYOUT_base_win_wrapper(...) LAYOUT_lulu_base_win(__VA_ARGS__)
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      /* MAC
       * ,-----------------------------------------.                    ,-----------------------------------------.
@@ -22,14 +54,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       *                   |      |      |      |/       /         \      \ |      |      |      |
       *                   `----------------------------'           '------''--------------------'
       */
-     [_MAC] = LAYOUT_wrapper(
+     [_MAC] = LAYOUT_base_mac_wrapper(
           KC_ESC,  _________________NUMBER_L0_________________,                     _________________NUMBER_R0_________________, KC_BSPC,
           KC_TAB,  _________________MAC_L1____________________,                     _________________MAC_R1____________________, KC_NO,
           KC_DEL,  _________________MAC_L2____________________,                     _________________MAC_R2____________________, KC_QUOT,
           OSM_MEH, _________________MAC_L3____________________, KC_LBRC,   KC_RBRC, _________________MAC_R3____________________, OSM_HYP,
                                      OS_SNIP, SPOTLHT, LT_SMES, LT_SYEN,   LT_FUNC, RAISE,   KC_MAKE, ADJUST
     ),
-     [_WINDOWS] = LAYOUT_wrapper(
+     [_WINDOWS] = LAYOUT_base_win_wrapper(
           _______, _________________NUMBER_L0_________________,                     _________________NUMBER_R0_________________, _______,
           _______, _________________WINDOWS_L1________________,                     _________________WINDOWS_R1________________, _______,
           _______, _________________WINDOWS_L2________________,                     _________________WINDOWS_R2________________, _______,
@@ -106,7 +138,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                    _______, _______, _______, _______, _______,  _______, _______, _______
     )
 };
-
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (!process_record_user_adaviloper(keycode, record)) return false;

@@ -17,7 +17,9 @@
     #include "combos.h"
 #endif
 #ifdef ENCODER_ENABLE
+#ifdef WPM_ENABLE
     #include "encoders.h"
+#endif
 #endif
 #ifdef GIT_ENABLE
     #include "git.h"
