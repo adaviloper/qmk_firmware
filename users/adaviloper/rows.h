@@ -4,61 +4,27 @@
 
 #include QMK_KEYBOARD_H
 
-#define LAYOUT_wrapper(...)                                           LAYOUT(__VA_ARGS__)
-#define LAYOUT_ortho_4x12_wrapper(...)                                LAYOUT_ortho_4x12(__VA_ARGS__)
+#define LAYOUT_wrapper(...)                                 LAYOUT(__VA_ARGS__)
+#define LAYOUT_ortho_4x12_wrapper(...)                      LAYOUT_ortho_4x12(__VA_ARGS__)
 
-#define _________________NUMBER_L0_________________                   KC_1, KC_2, KC_3, KC_4, KC_5
-#define _________________NUMBER_R0_________________                   KC_6, KC_7, KC_8, KC_9, KC_0
+#define _________________NUMBER_L0_________________         KC_1, KC_2, KC_3, KC_4, KC_5
+#define _________________NUMBER_R0_________________         KC_6, KC_7, KC_8, KC_9, KC_0
 
-#define _________________QWERTY_L1_________________                   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T
-#define _________________QWERTY_L2_________________                   KC_A,    KC_S,    KC_D,    KC_F,    KC_G
-#define _________________QWERTY_L3_________________                   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
+#define _________________QWERTY_L1_________________         KC_Q,    KC_W,    KC_E,    KC_R,    KC_T
+#define _________________QWERTY_L2_________________         KC_A,    KC_S,    KC_D,    KC_F,    KC_G
+#define _________________QWERTY_L3_________________         KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
 
-#define _________________QWERTY_R1_________________                   KC_Y,    KC_U,    KC_I,    KC_O,    KC_P
-#define _________________QWERTY_R2_________________                   KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN
-#define _________________QWERTY_R3_________________                   KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH
+#define _________________QWERTY_R1_________________         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P
+#define _________________QWERTY_R2_________________         KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN
+#define _________________QWERTY_R3_________________         KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH
 
-#define L_PINKY_KEYCODE     KC_A
-#define L_RING_KEYCODE      KC_S
-#define L_MIDDLE_KEYCODE    KC_D
-#define L_INDEX_1_KEYCODE   KC_F
-#define L_INDEX_2_KEYCODE   KC_G
+#define _________________DVORAK_L1_________________         KC_QUOT, KC_COMM, KC_DOT, KC_P,     KC_Y
+#define _________________DVORAK_L2_________________         KC_A,    KC_O,    KC_E,   KC_U,     KC_I
+#define _________________DVORAK_L3_________________         KC_SCLN, KC_Q,    KC_J,   KC_K,     KC_X
 
-#define R_INDEX_2_KEYCODE   KC_H
-#define R_INDEX_1_KEYCODE   KC_J
-#define R_MIDDLE_KEYCODE    KC_K
-#define R_RING_KEYCODE      KC_L
-#define R_PINKY_KEYCODE     KC_SCLN
-
-#define MAC_L_PINKY         SFT_T(L_PINKY_KEYCODE)
-#define MAC_L_RING          GUI_T(L_RING_KEYCODE)
-#define MAC_L_MIDDLE        CTL_T(L_MIDDLE_KEYCODE)
-#define MAC_L_INDEX_1       ALT_T(L_INDEX_1_KEYCODE)
-#define MAC_L_INDEX_2       LT(_GIT, L_INDEX_2_KEYCODE)
-
-#define MAC_R_INDEX_2       LT(_GIT, R_INDEX_2_KEYCODE)
-#define MAC_R_INDEX_1       ALT_T(R_INDEX_1_KEYCODE)
-#define MAC_R_MIDDLE        CTL_T(R_MIDDLE_KEYCODE)
-#define MAC_R_RING          GUI_T(R_RING_KEYCODE)
-#define MAC_R_PINKY         SFT_T(R_PINKY_KEYCODE)
-
-#define ______________MAC_L_HOME_ROW_______________      MAC_L_PINKY, MAC_L_RING, MAC_L_MIDDLE, MAC_L_INDEX_1, MAC_L_INDEX_2
-#define ______________MAC_R_HOME_ROW_______________      MAC_R_INDEX_2, MAC_R_INDEX_1, MAC_R_MIDDLE, MAC_R_RING, MAC_R_PINKY
-
-#define WIN_L_PINKY         MAC_L_PINKY
-#define WIN_L_RING          CTL_T(L_RING_KEYCODE)
-#define WIN_L_MIDDLE        GUI_T(L_MIDDLE_KEYCODE)
-#define WIN_L_INDEX_1       MAC_L_INDEX_1
-#define WIN_L_INDEX_2       L_INDEX_2_KEYCODE
-
-#define WIN_R_INDEX_2       R_INDEX_2_KEYCODE
-#define WIN_R_INDEX_1       MAC_R_INDEX_1
-#define WIN_R_MIDDLE        GUI_T(R_MIDDLE_KEYCODE)
-#define WIN_R_RING          CTL_T(R_RING_KEYCODE)
-#define WIN_R_PINKY         MAC_R_PINKY
-
-#define ______________WIN_L_HOME_ROW_______________      WIN_L_PINKY, WIN_L_RING, WIN_L_MIDDLE, WIN_L_INDEX_1, WIN_L_INDEX_2
-#define ______________WIN_R_HOME_ROW_______________      WIN_R_INDEX_2, WIN_R_INDEX_1, WIN_R_MIDDLE, WIN_R_RING, WIN_R_PINKY
+#define _________________DVORAK_R1_________________         KC_F,    KC_G,    KC_C,    KC_R,    KC_L
+#define _________________DVORAK_R2_________________         KC_D,    KC_H,    KC_T,    KC_N,    KC_S
+#define _________________DVORAK_R3_________________         KC_B,    KC_M,    KC_W,    KC_V,    KC_Z
 
 #define _________________LAYOUT_L1_________________         _________________QWERTY_L1_________________
 #define _________________LAYOUT_L2_________________         _________________QWERTY_L2_________________
@@ -69,19 +35,19 @@
 #define _________________LAYOUT_R3_________________         _________________QWERTY_R3_________________
 
 #define _________________MAC_L1____________________         _________________LAYOUT_L1_________________
-#define _________________MAC_L2____________________         ______________MAC_L_HOME_ROW_______________
+#define _________________MAC_L2____________________         _________________LAYOUT_L2_________________
 #define _________________MAC_L3____________________         _________________LAYOUT_L3_________________
 
 #define _________________MAC_R1____________________         _________________LAYOUT_R1_________________
-#define _________________MAC_R2____________________         ______________MAC_R_HOME_ROW_______________
+#define _________________MAC_R2____________________         _________________LAYOUT_R2_________________
 #define _________________MAC_R3____________________         _________________LAYOUT_R3_________________
 
 #define _________________WINDOWS_L1________________         _________________MAC_L1____________________
-#define _________________WINDOWS_L2________________         ______________WIN_L_HOME_ROW_______________
+#define _________________WINDOWS_L2________________         _________________MAC_L2____________________
 #define _________________WINDOWS_L3________________         _________________MAC_L3____________________
 
 #define _________________WINDOWS_R1________________         _________________MAC_R1____________________
-#define _________________WINDOWS_R2________________         ______________WIN_R_HOME_ROW_______________
+#define _________________WINDOWS_R2________________         _________________MAC_R2____________________
 #define _________________WINDOWS_R3________________         _________________MAC_R3____________________
 
 #define _________________FUNC_L0___________________         _______, _______, _______, _______, _______
