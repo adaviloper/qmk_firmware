@@ -31,6 +31,11 @@ bool process_git_adaviloper(uint16_t keycode, keyrecord_t *record) {
                 SEND_STRING("git reset --hard HEAD~1");
             }
             return false;
+        case GIT_RST:
+            if (record->event.pressed) {
+                SEND_STRING("git reset --hard");
+            }
+            return false;
         case GIT_SFT:
             if (record->event.pressed) {
                 SEND_STRING("git reset --soft HEAD~1");

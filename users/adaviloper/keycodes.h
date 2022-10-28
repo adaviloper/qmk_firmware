@@ -44,6 +44,7 @@ enum keycodes {
   GIT_BCK,
   GIT_GCP,
   GIT_HRD,
+  GIT_RST,
   GIT_SFT,
 #endif
   DBL_EQ,
