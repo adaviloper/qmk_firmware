@@ -68,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                    _______, _______, _______, _______,   _______, _______, _______, _______
     ),
 #ifdef GAMING_ENABLE
-    [_GAMING] = LAYOUT_base_win_wrapper(
+    [_GAMING] = LAYOUT_wrapper(
         KC_ESC,  _________________GAMING_L0_________________,                     _________________GAMING_R0_________________, _______,
         KC_TAB,  _________________GAMING_L1_________________,                     _________________GAMING_R1_________________, _______,
         KC_LCTL, _________________GAMING_L2_________________,                     _________________GAMING_R2_________________, _______,
