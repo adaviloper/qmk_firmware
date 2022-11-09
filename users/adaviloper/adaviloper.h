@@ -6,9 +6,6 @@
 #include "os_commands.h"
 #include "vi_commands.h"
 
-#ifdef AUTO_SHIFT_ENABLE
-    #include "auto_shift.h"
-#endif
 #ifdef CASE_MODES_ENABLE
     #include "case_modes.h"
     #include "caps_mock.h"

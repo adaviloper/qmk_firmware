@@ -1,8 +1,5 @@
 SRC += adaviloper.c
 
-ifeq ($(strip $(AUTO_SHIFT_ENABLE)), yes)
-    SRC += auto_shift.c
-endif
 ifdef CASE_MODES_ENABLE
   SRC += case_modes.c
   SRC += caps_mock.c

@@ -73,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,  _________________GAMING_L1_________________,                     _________________GAMING_R1_________________, _______,
         KC_LCTL, _________________GAMING_L2_________________,                     _________________GAMING_R2_________________, _______,
         KC_LSFT, _________________GAMING_L3_________________, _______,   _______, _________________GAMING_R3_________________, _______,
-                                   _______, KC_ENT,  KC_LALT, KC_SPC,    _______, _______, _______, _______
+                                   KC_LGUI, KC_ENT,  KC_LALT, KC_SPC,    _______, _______, _______, _______
     ),
 #endif
 #ifdef GIT_ENABLE
@@ -82,7 +82,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _________________GIT_L1____________________,                     _________________GIT_R1____________________, _______,
         _______, _________________GIT_L2____________________,                     _________________GIT_R2____________________, _______,
         _______, _________________GIT_L3____________________, _______,   _______, _________________GIT_R3____________________, _______,
-                                   _______, KC_ENT,  KC_LALT, KC_SPC,    _______, _______, _______, _______
+                                   _______, _______, _______, _______,   _______, _______, _______, _______
     ),
 #endif
     [_SYMBOL] = LAYOUT_wrapper(
@@ -94,10 +94,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_RAISE] = LAYOUT_wrapper(
         _______, _______, _______, _______, _______, _______,                     _______, _______, _______, _______, _______, _______,
-        KC_GRV,  _________________NUMBER_L0_________________,                     _________________NUMBER_R0_________________, KC_COLN,
+        KC_GRV,  _________________NUMBER_L0_________________,                     _________________NUMBER_R0_________________, KC_MINS,
         KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                       KC_DLR,  KC_4,    KC_5,    KC_6,    KC_PLUS, KC_ASTR,
         KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______,   _______, KC_0,    KC_1,    KC_2,    KC_3,    KC_DOT,  KC_SLSH,
-                                   _______, _______, _______, _______,   _______, _______, _______, _______
+                                   _______, _______, _______, _______,   _______, _______, KC_COLN, _______
     ),
 #ifdef ART_ENABLE
     [_ART] = LAYOUT_wrapper(
@@ -132,8 +132,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_ADJUST] = LAYOUT_wrapper(
         XXXXXXX, MAC,     WINDOWS, GAMING,  ART,     XXXXXXX,                     QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                       XXXXXXX, XXXXXXX, RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI,
-        KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  XXXXXXX,   XXXXXXX, XXXXXXX, RGB_M_R, RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                     XXXXXXX, XXXXXXX, RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   XXXXXXX, XXXXXXX, RGB_M_R, RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD,
                                    _______, _______, _______, _______,   _______, _______, _______, _______
     )
 };
