@@ -53,6 +53,7 @@ enum keycodes {
   OS_ALL,  // A
   OS_COPY, // C
   OS_FIND, // F
+  OS_NAPP, // F
   OS_SPEC, // Inspector
   OS_URL,  // L
   OS_RFRS, // R

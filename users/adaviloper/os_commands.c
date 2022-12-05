@@ -41,6 +41,15 @@ bool process_os_commands_adaviloper(uint16_t keycode, keyrecord_t *record) {
                 }
             }
             return false;
+        case OS_NAPP:
+            if (record->event.pressed) {
+                if (eeconfig_read_default_layer() == 1UL<<_MAC) {
+                    tap_code16(G(KC_TAB));
+                } else {
+                    tap_code16(A(KC_TAB));
+                }
+            }
+            return false;
         case OS_SPEC:
             if (record->event.pressed) {
                 if (eeconfig_read_default_layer() == 1UL<<_MAC) {
