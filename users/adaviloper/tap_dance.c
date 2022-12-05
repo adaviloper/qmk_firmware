@@ -267,4 +267,5 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [HYPR_MEH] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, hyper_meh_finished, hyper_meh_reset),
     [CTL_NAV] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, ctl_nav_finished, ctl_nav_reset),
     [DBL_DOT] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, sentence_finished, sentence_reset),
+    [TAB_NEW_OLD] = ACTION_TAP_DANCE_DOUBLE(G(KC_T), G(S(KC_T))),
 };

@@ -25,10 +25,12 @@ enum {
     HYPR_MEH,
     CTL_NAV,
     DBL_DOT,
+    TAB_NEW_OLD,
 };
 
 #define TD_FNCT TD(FN_CTL)
 #define TD_DBDT TD(DBL_DOT)
+#define TD_TAB  TD(TAB_NEW_OLD)
 
 td_state_t cur_dance(qk_tap_dance_state_t *state, bool interruptable);
 
