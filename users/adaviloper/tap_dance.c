@@ -212,38 +212,36 @@ void ctl_nav_reset(qk_tap_dance_state_t *state, void *user_data) {
 }
 
 // Create an instance of 'td_tap_t' for the 'x' tap dance.
-static td_tap_t sentence_tap_state = {
+static td_tap_t tab_new_old_tap_state = {
     .is_press_action = true,
     .state = TD_NONE
 };
 
-void sentence_finished(qk_tap_dance_state_t *state, void *user_data) {
-    sentence_tap_state.state = cur_dance(state, false);
-    switch (sentence_tap_state.state) {
+void tab_new_old_finished(qk_tap_dance_state_t *state, void *user_data) {
+    tab_new_old_tap_state.state = cur_dance(state, false);
+    switch (tab_new_old_tap_state.state) {
         case TD_SINGLE_TAP:
-            tap_code(KC_DOT);
-            break;
-        case TD_SINGLE_HOLD:
+            if (eeconfig_read_default_layer() == 1UL<<_MAC) {
+                tap_code16(G(KC_T));
+            } else {
+                tap_code16(C(KC_T));
+            }
             break;
         case TD_DOUBLE_TAP:
-            tap_code(KC_DOT);
-            tap_code(KC_SPC);
-            set_oneshot_mods(MOD_LSFT);
+            if (eeconfig_read_default_layer() == 1UL<<_MAC) {
+                tap_code16(G(S(KC_T)));
+            } else {
+                tap_code16(C(S(KC_T)));
+            }
             break;
-        case TD_DOUBLE_HOLD:
-            break;
-        case TD_TRIPLE_TAP:
-            SEND_STRING("...");
-            break;
-        case TD_NONE:
         default:
             register_code(KC_NO);
             break;
     }
 }
 
-void sentence_reset(qk_tap_dance_state_t *state, void *user_data) {
-    switch (sentence_tap_state.state) {
+void tab_new_old_reset(qk_tap_dance_state_t *state, void *user_data) {
+    switch (tab_new_old_tap_state.state) {
         case TD_SINGLE_TAP:
             break;
         case TD_SINGLE_HOLD:
@@ -258,7 +256,7 @@ void sentence_reset(qk_tap_dance_state_t *state, void *user_data) {
         default:
              unregister_code(KC_NO);
     }
-    sentence_tap_state.state = TD_NONE;
+    tab_new_old_tap_state.state = TD_NONE;
 }
 
 qk_tap_dance_action_t tap_dance_actions[] = {
@@ -266,6 +264,5 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [ENT_ESC] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, ent_esc_finished, ent_esc_reset),
     [HYPR_MEH] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, hyper_meh_finished, hyper_meh_reset),
     [CTL_NAV] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, ctl_nav_finished, ctl_nav_reset),
-    [DBL_DOT] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, sentence_finished, sentence_reset),
-    [TAB_NEW_OLD] = ACTION_TAP_DANCE_DOUBLE(G(KC_T), G(S(KC_T))),
+    [TAB_NEW_OLD] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, tab_new_old_finished, tab_new_old_reset),
 };
