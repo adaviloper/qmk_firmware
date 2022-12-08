@@ -18,13 +18,13 @@
 #define _________________QWERTY_R2_________________         KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN
 #define _________________QWERTY_R3_________________         KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH
 
-#define _________________DVORAK_L1_________________         KC_QUOT, KC_COMM, KC_DOT, KC_P,     KC_Y
+#define _________________DVORAK_L1_________________         KC_SCLN, KC_V,    KC_W,   KC_P,     KC_Y
 #define _________________DVORAK_L2_________________         KC_A,    KC_O,    KC_E,   KC_U,     KC_I
-#define _________________DVORAK_L3_________________         KC_SCLN, KC_Q,    KC_J,   KC_K,     KC_X
+#define _________________DVORAK_L3_________________         KC_Z,    KC_Q,    KC_J,   KC_K,     KC_X
 
 #define _________________DVORAK_R1_________________         KC_F,    KC_G,    KC_C,    KC_R,    KC_L
 #define _________________DVORAK_R2_________________         KC_D,    KC_H,    KC_T,    KC_N,    KC_S
-#define _________________DVORAK_R3_________________         KC_B,    KC_M,    KC_W,    KC_V,    KC_Z
+#define _________________DVORAK_R3_________________         KC_B,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH
 
 #define _________________LAYOUT_L1_________________         _________________QWERTY_L1_________________
 #define _________________LAYOUT_L2_________________         _________________QWERTY_L2_________________
