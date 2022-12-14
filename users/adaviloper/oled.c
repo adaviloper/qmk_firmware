@@ -138,7 +138,7 @@ static void render_anim(void) {
 }
 
 bool oled_task_user(void) {
-    if (!is_keyboard_master()) {
+    if (is_keyboard_master()) {
         // Host Keyboard Layer Status
         oled_write_P(PSTR("Layer: "), false);
 

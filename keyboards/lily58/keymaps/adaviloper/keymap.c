@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       */
      [_MAC] = LAYOUT_base_mac_wrapper(
           KC_ESC,  _________________NUMBER_L0_________________,                     _________________NUMBER_R0_________________, KC_BSPC,
-          KC_TAB,  _________________MAC_L1____________________,                     _________________MAC_R1____________________, KC_NO,
+          KC_TAB,  _________________MAC_L1____________________,                     _________________MAC_R1____________________, KC_BSPC,
           KC_DEL,  _________________MAC_L2____________________,                     _________________MAC_R2____________________, KC_QUOT,
           OSM_MEH, _________________MAC_L3____________________, KC_LBRC,   KC_RBRC, _________________MAC_R3____________________, OSM_HYP,
                                      OS_SNIP, SPOTLHT, LT_SMES, LT_SYEN,   LT_FUNC, RAISE,   KC_MAKE, ADJUST
