@@ -39,7 +39,9 @@ const rgblight_segment_t PROGMEM adjust_rgb_layer[] = RGBLIGHT_LAYER_SEGMENTS(
 // Now define the array of layers. Later layers take precedence
 const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
     [_MAC] = mac_rgb_layer,    // Overrides caps lock layer
+    [_MAC_DVORAK] = mac_rgb_layer,    // Overrides caps lock layer
     [_WINDOWS] = windows_rgb_layer,    // Overrides other layers
+    [_WINDOWS_DVORAK] = windows_rgb_layer,    // Overrides other layers
 #ifdef GAMING_ENABLE
     [_GAMING] = gaming_rgb_layer,     // Overrides other layers
 #endif
@@ -55,6 +57,8 @@ void keyboard_post_init_kb(void) {
 layer_state_t default_layer_state_set_user(layer_state_t state) {
     rgblight_set_layer_state(_MAC, layer_state_cmp(state, _MAC));
     rgblight_set_layer_state(_WINDOWS, layer_state_cmp(state, _WINDOWS));
+    rgblight_set_layer_state(_SYMBOL, layer_state_cmp(state, _SYMBOL));
+    rgblight_set_layer_state(_RAISE, layer_state_cmp(state, _RAISE));
 #ifdef GAMING_ENABLE
     rgblight_set_layer_state(_GAMING, layer_state_cmp(state, _GAMING));
 #endif
@@ -62,8 +66,7 @@ layer_state_t default_layer_state_set_user(layer_state_t state) {
 }
 
 layer_state_t layer_state_set_user(layer_state_t state) {
-    rgblight_set_layer_state(_NAV_AND_MEDIA, layer_state_cmp(state, _NAV_AND_MEDIA));
     rgblight_set_layer_state(_SYMBOL, layer_state_cmp(state, _SYMBOL));
-    rgblight_set_layer_state(_ADJUST, layer_state_cmp(state, _ADJUST));
+    rgblight_set_layer_state(_RAISE, layer_state_cmp(state, _RAISE));
     return state;
 }

@@ -158,60 +158,6 @@ void hyper_meh_reset(qk_tap_dance_state_t *state, void *user_data) {
 }
 
 // Create an instance of 'td_tap_t' for the 'x' tap dance.
-static td_tap_t ctl_navtap_state = {
-    .is_press_action = true,
-    .state = TD_NONE
-};
-
-void ctl_nav_finished(qk_tap_dance_state_t *state, void *user_data) {
-    uint8_t default_layer = eeconfig_read_default_layer();
-    ctl_navtap_state.state = cur_dance(state, false);
-    switch (ctl_navtap_state.state) {
-        case TD_SINGLE_TAP:
-            layer_invert(_NAV_AND_MEDIA);
-            break;
-        case TD_SINGLE_HOLD:
-            if (layer_state_cmp(default_layer, _MAC)) {
-                register_mods(MOD_BIT(KC_LGUI));
-            } else {
-                register_mods(MOD_BIT(KC_LCTL));
-            }
-            break;
-        case TD_DOUBLE_TAP:
-            break;
-        case TD_DOUBLE_HOLD:
-            break;
-        case TD_NONE:
-        default:
-            register_code(KC_NO);
-            break;
-    }
-}
-
-void ctl_nav_reset(qk_tap_dance_state_t *state, void *user_data) {
-    uint8_t default_layer = eeconfig_read_default_layer();
-    switch (ctl_navtap_state.state) {
-        case TD_SINGLE_TAP:
-            break;
-        case TD_SINGLE_HOLD:
-            if (layer_state_cmp(default_layer, _MAC)) {
-                unregister_mods(MOD_BIT(KC_LGUI));
-            } else {
-                unregister_mods(MOD_BIT(KC_LCTL));
-            }
-            break;
-        case TD_DOUBLE_TAP:
-             break;
-        case TD_DOUBLE_HOLD:
-            break;
-        case TD_NONE:
-        default:
-             unregister_code(KC_NO);
-    }
-    ctl_navtap_state.state = TD_NONE;
-}
-
-// Create an instance of 'td_tap_t' for the 'x' tap dance.
 static td_tap_t tab_new_old_tap_state = {
     .is_press_action = true,
     .state = TD_NONE
@@ -221,14 +167,14 @@ void tab_new_old_finished(qk_tap_dance_state_t *state, void *user_data) {
     tab_new_old_tap_state.state = cur_dance(state, false);
     switch (tab_new_old_tap_state.state) {
         case TD_SINGLE_TAP:
-            if (eeconfig_read_default_layer() == 1UL<<_MAC) {
+            if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_DVORAK) {
                 tap_code16(G(KC_T));
             } else {
                 tap_code16(C(KC_T));
             }
             break;
         case TD_DOUBLE_TAP:
-            if (eeconfig_read_default_layer() == 1UL<<_MAC) {
+            if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_DVORAK) {
                 tap_code16(G(S(KC_T)));
             } else {
                 tap_code16(C(S(KC_T)));
@@ -263,6 +209,5 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [FN_CTL] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, fn_finished, fn_reset),
     [ENT_ESC] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, ent_esc_finished, ent_esc_reset),
     [HYPR_MEH] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, hyper_meh_finished, hyper_meh_reset),
-    [CTL_NAV] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, ctl_nav_finished, ctl_nav_reset),
     [TAB_NEW_OLD] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, tab_new_old_finished, tab_new_old_reset),
 };

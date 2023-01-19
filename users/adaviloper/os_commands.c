@@ -86,15 +86,6 @@ bool process_os_commands_adaviloper(uint16_t keycode, keyrecord_t *record) {
                 }
             }
             return false;
-        case OS_TAB:
-            if (record->event.pressed) {
-                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_DVORAK) {
-                    tap_code16(G(KC_T));
-                } else {
-                    tap_code16(C(KC_T));
-                }
-            }
-            return false;
         case OS_CTAB:
             if (record->event.pressed) {
                 if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_DVORAK) {

@@ -60,7 +60,6 @@ enum keycodes {
   OS_URL,  // L
   OS_RFRS, // R
   OS_SAVE, // S
-  OS_TAB,  // T
   OS_CTAB, // W
   OS_PSTE, // V
   OS_CUT,  // X

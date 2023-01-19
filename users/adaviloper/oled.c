@@ -140,14 +140,20 @@ static void render_anim(void) {
 bool oled_task_user(void) {
     if (is_keyboard_master()) {
         // Host Keyboard Layer Status
-        oled_write_P(PSTR("Layer: "), false);
+        oled_write_P(PSTR("_: "), false);
 
         switch (get_highest_layer(layer_state)) {
             case _MAC:
                 oled_write_P(PSTR("Mac\n"), false);
                 break;
+            case _MAC_DVORAK:
+                oled_write_P(PSTR("Mac: Dvorak\n"), false);
+                break;
             case _WINDOWS:
                 oled_write_P(PSTR("Windows\n"), false);
+                break;
+            case _WINDOWS_DVORAK:
+                oled_write_P(PSTR("Windows: Dvorak\n"), false);
                 break;
             case _GAMING:
                 oled_write_P(PSTR("Gaming\n"), false);

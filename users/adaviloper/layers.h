@@ -15,7 +15,6 @@ enum layers {
 #endif
   _SYSTEM,
   _FUNC,
-  _NAV_AND_MEDIA,
   _SYMBOL,
   _RAISE,
   _FUNC2,
