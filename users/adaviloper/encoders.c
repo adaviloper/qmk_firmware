@@ -14,6 +14,14 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
           tap_code(KC_MNXT);
       }
     }
+    if (highest_layer == _GAMING) { // on Raise layer
+      // Cursor control
+      if (clockwise) {
+          tap_code(KC_UP);
+      } else {
+          tap_code(KC_DOWN);
+      }
+    }
 #ifdef ART_ENABLE
     else if (highest_layer == _ART) {
       if (clockwise) {
