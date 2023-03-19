@@ -39,9 +39,9 @@ const rgblight_segment_t PROGMEM adjust_rgb_layer[] = RGBLIGHT_LAYER_SEGMENTS(
 // Now define the array of layers. Later layers take precedence
 const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
     [_MAC] = mac_rgb_layer,    // Overrides caps lock layer
-    [_MAC_DVORAK] = mac_rgb_layer,    // Overrides caps lock layer
+    [_MAC_ALT] = mac_rgb_layer,    // Overrides caps lock layer
     [_WINDOWS] = windows_rgb_layer,    // Overrides other layers
-    [_WINDOWS_DVORAK] = windows_rgb_layer,    // Overrides other layers
+    [_WINDOWS_ALT] = windows_rgb_layer,    // Overrides other layers
 #ifdef GAMING_ENABLE
     [_GAMING] = gaming_rgb_layer,     // Overrides other layers
 #endif

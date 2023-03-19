@@ -30,9 +30,9 @@ bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
                 persistent_default_layer_set(1UL<<_MAC);
             }
             return false;
-        case MDVORAK:
+        case M_ALT:
             if (record->event.pressed) {
-                persistent_default_layer_set(1UL<<_MAC_DVORAK);
+                persistent_default_layer_set(1UL<<_MAC_ALT);
             }
             return false;
         case WINDOWS:
@@ -40,9 +40,9 @@ bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
                 persistent_default_layer_set(1UL<<_WINDOWS);
             }
             return false;
-        case WDVORAK:
+        case W_ALT:
             if (record->event.pressed) {
-                persistent_default_layer_set(1UL<<_WINDOWS_DVORAK);
+                persistent_default_layer_set(1UL<<_WINDOWS_ALT);
             }
             return false;
 #ifdef ART_ENABLE

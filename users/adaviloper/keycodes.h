@@ -15,9 +15,9 @@
 
 enum keycodes {
   MAC = SAFE_RANGE,
-  MDVORAK,
+  M_ALT,
   WINDOWS,
-  WDVORAK,
+  W_ALT,
 #ifdef GAMING_ENABLE
   GAMING,
 #endif

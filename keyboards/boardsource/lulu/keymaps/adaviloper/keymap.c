@@ -45,11 +45,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         OSM_MEH, _________________LAYOUT_L3_________________, KC_LBRC,   KC_RBRC, _________________LAYOUT_R3_________________, OSM_HYP,
                                    OS_SNIP, SPOTLHT, LT_SMES, LT_SYEN,   LT_FUNC, RAISE,   _______, ADJUST
     ),
-    [_MAC_DVORAK] = LAYOUT_base_mac_wrapper(
-        KC_ESC,  _________________NUMBER_L0_________________,                     _________________NUMBER_R0_________________, KC_BSPC,
-        KC_TAB,  _________________DVORAK_L1_________________,                     _________________DVORAK_R1_________________, KC_NO,
-        KC_DEL,  _________________DVORAK_L2_________________,                     _________________DVORAK_R2_________________, KC_QUOT,
-        OSM_MEH, _________________DVORAK_L3_________________, KC_LBRC,   KC_RBRC, _________________DVORAK_R3_________________, OSM_HYP,
+    [_MAC_ALT] = LAYOUT_base_mac_wrapper(
+        _______, _________________NUMBER_L0_________________,                     _________________NUMBER_R0_________________, _______,
+        _______, _________________ALT_L1____________________,                     _________________ALT_R1____________________, _______,
+        _______, _________________ALT_L2____________________,                     _________________ALT_R2____________________, _______,
+        _______, _________________ALT_L3____________________, KC_LBRC,   KC_RBRC, _________________ALT_R3____________________, _______,
                                    OS_SNIP, SPOTLHT, LT_SMES, LT_SYEN,   LT_FUNC, RAISE,   _______, ADJUST
     ),
     [_WINDOWS] = LAYOUT_base_win_wrapper(
@@ -59,11 +59,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _________________LAYOUT_L3_________________, _______,   _______, _________________LAYOUT_R3_________________, _______,
                                    _______, _______, _______, _______,   _______, _______, _______, _______
     ),
-    [_WINDOWS_DVORAK] = LAYOUT_base_win_wrapper(
-        KC_ESC,  _________________NUMBER_L0_________________,                     _________________NUMBER_R0_________________, _______,
-        KC_TAB,  _________________DVORAK_L1_________________,                     _________________DVORAK_R1_________________, _______,
-        KC_DEL,  _________________DVORAK_L2_________________,                     _________________DVORAK_R2_________________, _______,
-        OSM_MEH, _________________DVORAK_L3_________________, KC_LBRC,   KC_RBRC, _________________DVORAK_R3_________________, _______,
+    [_WINDOWS_ALT] = LAYOUT_base_win_wrapper(
+        _______, _________________NUMBER_L0_________________,                     _________________NUMBER_R0_________________, _______,
+        _______, _________________ALT_L1____________________,                     _________________ALT_R1____________________, _______,
+        _______, _________________ALT_L2____________________,                     _________________ALT_R2____________________, _______,
+        _______, _________________ALT_L3____________________, KC_LBRC,   KC_RBRC, _________________ALT_R3____________________, _______,
                                    _______, _______, _______, _______,   _______, _______, _______, _______
     ),
 #ifdef GAMING_ENABLE
@@ -130,7 +130,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_ADJUST] = LAYOUT_wrapper(
         XXXXXXX, MAC,     WINDOWS, GAMING,  ART,     XXXXXXX,                     QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, MDVORAK, WDVORAK, XXXXXXX, XXXXXXX, XXXXXXX,                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, M_ALT,   W_ALT,   XXXXXXX, XXXXXXX, XXXXXXX,                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                     XXXXXXX, XXXXXXX, XXXXXXX, RGB_HUI, RGB_SAI, RGB_VAI,
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   XXXXXXX, XXXXXXX, RGB_M_R, RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD,
                                    _______, _______, _______, _______,   _______, _______, _______, _______

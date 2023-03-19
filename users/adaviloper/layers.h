@@ -1,8 +1,8 @@
 enum layers {
   _MAC,
-  _MAC_DVORAK,
+  _MAC_ALT,
   _WINDOWS,
-  _WINDOWS_DVORAK,
+  _WINDOWS_ALT,
 #ifdef GAMING_ENABLE
   _GAMING,
 #endif

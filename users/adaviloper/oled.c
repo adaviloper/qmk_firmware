@@ -146,14 +146,14 @@ bool oled_task_user(void) {
             case _MAC:
                 oled_write_P(PSTR("Mac\n"), false);
                 break;
-            case _MAC_DVORAK:
-                oled_write_P(PSTR("Mac: Dvorak\n"), false);
+            case _MAC_ALT:
+                oled_write_P(PSTR("Mac: ALT\n"), false);
                 break;
             case _WINDOWS:
                 oled_write_P(PSTR("Windows\n"), false);
                 break;
-            case _WINDOWS_DVORAK:
-                oled_write_P(PSTR("Windows: Dvorak\n"), false);
+            case _WINDOWS_ALT:
+                oled_write_P(PSTR("Windows: ALT\n"), false);
                 break;
             case _GAMING:
                 oled_write_P(PSTR("Gaming\n"), false);

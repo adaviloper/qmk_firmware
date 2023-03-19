@@ -18,6 +18,14 @@
 #define _________________QWERTY_R2_________________         KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN
 #define _________________QWERTY_R3_________________         KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH
 
+#define _________________CARPALX_L1________________         KC_Q,    KC_G,    KC_P,   KC_L,     KC_W
+#define _________________CARPALX_L2________________         KC_D,    KC_S,    KC_T,   KC_N,     KC_R
+#define _________________CARPALX_L3________________         KC_Z,    KC_X,    KC_C,    KC_V,    KC_J
+
+#define _________________CARPALX_R1________________         KC_Y,    KC_F,    KC_U,    KC_B,    KC_SCLN
+#define _________________CARPALX_R2________________         KC_I,    KC_A,    KC_E,   KC_O,     KC_H
+#define _________________CARPALX_R3________________         KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH
+
 #define _________________DVORAK_L1_________________         KC_SCLN, KC_V,    KC_W,   KC_P,     KC_Y
 #define _________________DVORAK_L2_________________         KC_A,    KC_O,    KC_E,   KC_U,     KC_I
 #define _________________DVORAK_L3_________________         KC_Z,    KC_Q,    KC_J,   KC_K,     KC_X
@@ -25,6 +33,14 @@
 #define _________________DVORAK_R1_________________         KC_F,    KC_G,    KC_C,    KC_R,    KC_L
 #define _________________DVORAK_R2_________________         KC_D,    KC_H,    KC_T,    KC_N,    KC_S
 #define _________________DVORAK_R3_________________         KC_B,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH
+
+#define _________________ALT_L1____________________         _________________CARPALX_L1________________
+#define _________________ALT_L2____________________         _________________CARPALX_L2________________
+#define _________________ALT_L3____________________         _________________CARPALX_L3________________
+
+#define _________________ALT_R1____________________         _________________CARPALX_R1________________
+#define _________________ALT_R2____________________         _________________CARPALX_R2________________
+#define _________________ALT_R3____________________         _________________CARPALX_R3________________
 
 #define _________________LAYOUT_L1_________________         _________________QWERTY_L1_________________
 #define _________________LAYOUT_L2_________________         _________________QWERTY_L2_________________

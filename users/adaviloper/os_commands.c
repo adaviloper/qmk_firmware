@@ -16,7 +16,7 @@ bool process_os_commands_adaviloper(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case OS_ALL:
             if (record->event.pressed) {
-                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_DVORAK) {
+                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_ALT) {
                     tap_code16(G(KC_A));
                 } else {
                     tap_code16(C(KC_A));
@@ -25,7 +25,7 @@ bool process_os_commands_adaviloper(uint16_t keycode, keyrecord_t *record) {
             return false;
         case OS_COPY:
             if (record->event.pressed) {
-                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_DVORAK) {
+                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_ALT) {
                     tap_code16(G(KC_C));
                 } else {
                     tap_code16(C(KC_C));
@@ -34,7 +34,7 @@ bool process_os_commands_adaviloper(uint16_t keycode, keyrecord_t *record) {
             return false;
         case OS_FIND:
             if (record->event.pressed) {
-                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_DVORAK) {
+                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_ALT) {
                     tap_code16(G(KC_F));
                 } else {
                     tap_code16(C(KC_F));
@@ -43,7 +43,7 @@ bool process_os_commands_adaviloper(uint16_t keycode, keyrecord_t *record) {
             return false;
         case OS_NAPP:
             if (record->event.pressed) {
-                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_DVORAK) {
+                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_ALT) {
                     tap_code16(G(KC_TAB));
                 } else {
                     tap_code16(A(KC_TAB));
@@ -52,7 +52,7 @@ bool process_os_commands_adaviloper(uint16_t keycode, keyrecord_t *record) {
             return false;
         case OS_SPEC:
             if (record->event.pressed) {
-                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_DVORAK) {
+                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_ALT) {
                     tap_code16(G(A(KC_I)));
                 } else {
                     tap_code16(C(KC_F));
@@ -61,7 +61,7 @@ bool process_os_commands_adaviloper(uint16_t keycode, keyrecord_t *record) {
             return false;
         case OS_URL:
             if (record->event.pressed) {
-                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_DVORAK) {
+                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_ALT) {
                     tap_code16(G(KC_L));
                 } else {
                     tap_code16(C(KC_L));
@@ -70,7 +70,7 @@ bool process_os_commands_adaviloper(uint16_t keycode, keyrecord_t *record) {
             return false;
         case OS_RFRS:
             if (record->event.pressed) {
-                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_DVORAK) {
+                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_ALT) {
                     tap_code16(G(KC_R));
                 } else {
                     tap_code16(C(KC_R));
@@ -79,7 +79,7 @@ bool process_os_commands_adaviloper(uint16_t keycode, keyrecord_t *record) {
             return false;
         case OS_SAVE:
             if (record->event.pressed) {
-                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_DVORAK) {
+                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_ALT) {
                     tap_code16(G(KC_S));
                 } else {
                     tap_code16(C(KC_S));
@@ -88,7 +88,7 @@ bool process_os_commands_adaviloper(uint16_t keycode, keyrecord_t *record) {
             return false;
         case OS_CTAB:
             if (record->event.pressed) {
-                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_DVORAK) {
+                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_ALT) {
                     tap_code16(G(KC_W));
                 } else {
                     tap_code16(C(KC_W));
@@ -97,7 +97,7 @@ bool process_os_commands_adaviloper(uint16_t keycode, keyrecord_t *record) {
             return false;
         case OS_PSTE:
             if (record->event.pressed) {
-                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_DVORAK) {
+                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_ALT) {
                     tap_code16(G(KC_V));
                 } else {
                     tap_code16(C(KC_V));
@@ -106,7 +106,7 @@ bool process_os_commands_adaviloper(uint16_t keycode, keyrecord_t *record) {
             return false;
         case OS_CUT:
             if (record->event.pressed) {
-                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_DVORAK) {
+                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_ALT) {
                     tap_code16(G(KC_X));
                 } else {
                     tap_code16(C(KC_X));
@@ -114,14 +114,14 @@ bool process_os_commands_adaviloper(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
         case OS_REDO:
-            if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_DVORAK) {
+            if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_ALT) {
                 register_os_keycode(G(S(KC_Z)), record);
             } else {
                 register_os_keycode(C(KC_Y), record);
             }
             return false;
         case OS_UNDO:
-            if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_DVORAK) {
+            if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_ALT) {
                 register_os_keycode(G(KC_Z), record);
             } else {
                 register_os_keycode(C(KC_Z), record);
@@ -129,7 +129,7 @@ bool process_os_commands_adaviloper(uint16_t keycode, keyrecord_t *record) {
             return false;
         case OS_SNIP:
             if (record->event.pressed) {
-                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_DVORAK) {
+                if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_ALT) {
                     tap_code16(G(S(C(KC_4))));
                 } else {
                     tap_code16(G(S(KC_S)));
