@@ -24,4 +24,5 @@ ifeq ($(strip $(TAP_DANCE_ENABLE)), yes)
 endif
 SRC += os_commands.c
 SRC += vi_commands.c
+SRC += repeat_keys.c
 LTO_ENABLE = yes

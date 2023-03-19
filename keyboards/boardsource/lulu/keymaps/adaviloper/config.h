@@ -12,6 +12,7 @@
 #define SPLIT_OLED_ENABLE
 #define SPLIT_WPM_ENABLE
 #define TAPPING_TERM 200
+#define RGBLED_NUM 70
 
 #ifndef NO_DEBUG
 #define NO_DEBUG

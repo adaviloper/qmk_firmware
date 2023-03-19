@@ -49,6 +49,7 @@ enum keycodes {
   GIT_RST,
   GIT_SFT,
 #endif
+  RE_PEAT,
   DBL_EQ,
   TRIP_EQ,
   DBL_CLN,

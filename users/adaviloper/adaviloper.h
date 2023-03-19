@@ -5,6 +5,7 @@
 #include "keycodes.h"
 #include "os_commands.h"
 #include "vi_commands.h"
+#include "repeat_keys.h"
 
 #ifdef CASE_MODES_ENABLE
     #include "case_modes.h"

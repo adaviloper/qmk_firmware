@@ -4,7 +4,7 @@
 
 #include QMK_KEYBOARD_H
 
-td_state_t cur_dance(qk_tap_dance_state_t *state, bool interruptable) {
+td_state_t cur_dance(tap_dance_state_t *state, bool interruptable) {
     bool can_be_interrupted = interruptable || false;
     if (state->count == 1) {
         if ((state->interrupted && can_be_interrupted) || !state->pressed) return TD_SINGLE_TAP;
@@ -35,7 +35,7 @@ static td_tap_t fntap_state = {
     .state = TD_NONE
 };
 
-void fn_finished(qk_tap_dance_state_t *state, void *user_data) {
+void fn_finished(tap_dance_state_t *state, void *user_data) {
     fntap_state.state = cur_dance(state, true);
     switch (fntap_state.state) {
         case TD_SINGLE_TAP:
@@ -55,7 +55,7 @@ void fn_finished(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void fn_reset(qk_tap_dance_state_t *state, void *user_data) {
+void fn_reset(tap_dance_state_t *state, void *user_data) {
     switch (fntap_state.state) {
         case TD_SINGLE_TAP:
             unregister_code(KC_SPC);
@@ -80,7 +80,7 @@ static td_tap_t ent_esc_tap_state = {
     .state = TD_NONE
 };
 
-void ent_esc_finished(qk_tap_dance_state_t *state, void *user_data) {
+void ent_esc_finished(tap_dance_state_t *state, void *user_data) {
     ent_esc_tap_state.state = cur_dance(state, false);
     switch (ent_esc_tap_state.state) {
         case TD_SINGLE_TAP:
@@ -99,7 +99,7 @@ void ent_esc_finished(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void ent_esc_reset(qk_tap_dance_state_t *state, void *user_data) {
+void ent_esc_reset(tap_dance_state_t *state, void *user_data) {
     switch (ent_esc_tap_state.state) {
         case TD_SINGLE_TAP:
             unregister_code(KC_ENT);
@@ -123,7 +123,7 @@ static td_tap_t hyper_mehtap_state = {
     .state = TD_NONE
 };
 
-void hyper_meh_finished(qk_tap_dance_state_t *state, void *user_data) {
+void hyper_meh_finished(tap_dance_state_t *state, void *user_data) {
     hyper_mehtap_state.state = cur_dance(state, true);
     switch (hyper_mehtap_state.state) {
         case TD_SINGLE_TAP:
@@ -143,7 +143,7 @@ void hyper_meh_finished(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void hyper_meh_reset(qk_tap_dance_state_t *state, void *user_data) {
+void hyper_meh_reset(tap_dance_state_t *state, void *user_data) {
     switch (hyper_mehtap_state.state) {
         case TD_SINGLE_TAP:
         case TD_SINGLE_HOLD:
@@ -163,7 +163,7 @@ static td_tap_t tab_new_old_tap_state = {
     .state = TD_NONE
 };
 
-void tab_new_old_finished(qk_tap_dance_state_t *state, void *user_data) {
+void tab_new_old_finished(tap_dance_state_t *state, void *user_data) {
     tab_new_old_tap_state.state = cur_dance(state, false);
     switch (tab_new_old_tap_state.state) {
         case TD_SINGLE_TAP:
@@ -186,7 +186,7 @@ void tab_new_old_finished(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void tab_new_old_reset(qk_tap_dance_state_t *state, void *user_data) {
+void tab_new_old_reset(tap_dance_state_t *state, void *user_data) {
     switch (tab_new_old_tap_state.state) {
         case TD_SINGLE_TAP:
             break;
@@ -205,7 +205,7 @@ void tab_new_old_reset(qk_tap_dance_state_t *state, void *user_data) {
     tab_new_old_tap_state.state = TD_NONE;
 }
 
-qk_tap_dance_action_t tap_dance_actions[] = {
+tap_dance_action_t tap_dance_actions[] = {
     [FN_CTL] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, fn_finished, fn_reset),
     [ENT_ESC] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, ent_esc_finished, ent_esc_reset),
     [HYPR_MEH] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, hyper_meh_finished, hyper_meh_reset),
