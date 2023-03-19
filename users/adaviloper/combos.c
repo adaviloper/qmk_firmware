@@ -3,10 +3,9 @@
 #include QMK_KEYBOARD_H
 
 enum combo_events {
-    COMBO_ENT,
+    COMBO_ENT_L,
+    COMBO_ENT_R,
     COMBO_BACKSPACE,
-    COMBO_HYPER,
-    COMBO_MEH,
     COMBO_SENTENCE,
     COMBO_QUESTION,
     COMBO_EXCLAMATION,
@@ -15,7 +14,8 @@ enum combo_events {
 
 uint16_t COMBO_LEN = COMBO_LENGTH;
 
-const uint16_t PROGMEM ent_combo[] = {KC_M, KC_COMM, COMBO_END};
+const uint16_t PROGMEM ent_l_combo[] = {KC_C, KC_V, COMBO_END};
+const uint16_t PROGMEM ent_r_combo[] = {KC_M, KC_COMM, COMBO_END};
 #ifdef ART_ENABLE
 const uint16_t PROGMEM bspc_combo[] = {KC_L, KC_SCLN, COMBO_END};
 #endif
@@ -24,7 +24,8 @@ const uint16_t PROGMEM question_combo[] = {KC_COMM, KC_SLSH, COMBO_END};
 const uint16_t PROGMEM exclamation_combo[] = {KC_Z, KC_COMM, COMBO_END};
 
 combo_t key_combos[] = {
-    [COMBO_ENT] = COMBO(ent_combo, KC_ENT),
+    [COMBO_ENT_L] = COMBO(ent_l_combo, KC_ENT),
+    [COMBO_ENT_R] = COMBO(ent_r_combo, KC_ENT),
 #ifdef ART_ENABLE
     [COMBO_BACKSPACE] = COMBO(bspc_combo, KC_BSPC),
 #endif
