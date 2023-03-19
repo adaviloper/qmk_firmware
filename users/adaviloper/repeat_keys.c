@@ -18,6 +18,8 @@
  */
 
 #include "repeat_keys.h"
+#include "layers.h"
+#include "keycodes.h"
 
 // This library makes use of keyrecord_t's `.keycode` field. This field is only
 // present when Combos are enabled, which we check here. Enable Combos in your
@@ -367,8 +369,7 @@ bool alt_repeat_key_tap(void) {
 }
 
 // Default implementation of get_repeat_key_eligible().
-__attribute__((weak)) bool get_repeat_key_eligible(uint16_t keycode,
-                                                   keyrecord_t* record) {
+bool get_repeat_key_eligible(uint16_t keycode, keyrecord_t* record) {
   switch (keycode) {
     // Ignore MO, TO, TG, and TT layer switch keys.
     case QK_MOMENTARY ... QK_MOMENTARY_MAX:

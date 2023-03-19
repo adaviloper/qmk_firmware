@@ -43,14 +43,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,  _________________LAYOUT_L1_________________,                     _________________LAYOUT_R1_________________, RE_PEAT,
         KC_DEL,  _________________LAYOUT_L2_________________,                     _________________LAYOUT_R2_________________, KC_QUOT,
         OSM_MEH, _________________LAYOUT_L3_________________, KC_LBRC,   KC_RBRC, _________________LAYOUT_R3_________________, OSM_HYP,
-                                   OS_SNIP, SPOTLHT, LT_SMES, LT_SYEN,   LT_FUNC, RAISE,   _______, ADJUST
+                                   OS_SNIP, RE_PEAT, LT_SMES, LT_REP,   LT_FUNC, RAISE,   RE_PEAT, ADJUST
     ),
     [_MAC_ALT] = LAYOUT_base_mac_wrapper(
         _______, _________________NUMBER_L0_________________,                     _________________NUMBER_R0_________________, _______,
         _______, _________________ALT_L1____________________,                     _________________ALT_R1____________________, _______,
         _______, _________________ALT_L2____________________,                     _________________ALT_R2____________________, _______,
         _______, _________________ALT_L3____________________, KC_LBRC,   KC_RBRC, _________________ALT_R3____________________, _______,
-                                   OS_SNIP, SPOTLHT, LT_SMES, LT_SYEN,   LT_FUNC, RAISE,   _______, ADJUST
+                                   _______, _______, _______, _______,   _______, _______, _______, _______
     ),
     [_WINDOWS] = LAYOUT_base_win_wrapper(
         _______, _________________NUMBER_L0_________________,                     _________________NUMBER_R0_________________, _______,

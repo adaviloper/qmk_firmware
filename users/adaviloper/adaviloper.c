@@ -13,7 +13,6 @@ void persistent_default_layer_set(uint16_t default_layer) {
 uint8_t mod_state;
 bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
     // Store the current modifier state in the variable for later reference
-    if (!process_repeat_key(keycode, record, RE_PEAT)) { return false; }
 #ifdef CASE_MODES_ENABLE
     if (!process_case_modes(keycode, record)) { return false; }
     if (!process_caps_mock_adaviloper(keycode, record)) { return false; };
@@ -45,6 +44,16 @@ bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
                 persistent_default_layer_set(1UL<<_WINDOWS_ALT);
             }
             return false;
+        case LT_REP:
+            if (record->tap.count > 0) {  // Key is being tapped.
+                if (record->event.pressed) {
+                    repeat_key_register();
+                } else {
+                    repeat_key_unregister();
+                }
+                return false;  // Skip default handling.
+            }
+            return true;  // Continue default handling.
 #ifdef ART_ENABLE
         case ART:
             if (record->event.pressed) {
@@ -177,5 +186,6 @@ bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
     }
+    if (!process_repeat_key(keycode, record, RE_PEAT)) { return false; }
     return true;
 }
