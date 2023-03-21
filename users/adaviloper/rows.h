@@ -7,8 +7,8 @@
 #define LAYOUT_wrapper(...)                                 LAYOUT(__VA_ARGS__)
 #define LAYOUT_ortho_4x12_wrapper(...)                      LAYOUT_ortho_4x12(__VA_ARGS__)
 
-#define _________________NUMBER_L0_________________         KC_1, KC_2, KC_3, KC_4, KC_5
-#define _________________NUMBER_R0_________________         KC_6, KC_7, KC_8, KC_9, KC_0
+#define _________________NUMBER_L0_________________         KC_1,    KC_2,    KC_3,    KC_4,    KC_5
+#define _________________NUMBER_R0_________________         KC_6,    KC_7,    KC_8,    KC_9,    KC_0
 
 #define _________________QWERTY_L1_________________         KC_Q,    KC_W,    KC_E,    KC_R,    KC_T
 #define _________________QWERTY_L2_________________         KC_A,    KC_S,    KC_D,    KC_F,    KC_G
@@ -18,12 +18,12 @@
 #define _________________QWERTY_R2_________________         KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN
 #define _________________QWERTY_R3_________________         KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH
 
-#define _________________CARPALX_L1________________         KC_Q,    KC_G,    KC_P,   KC_L,     KC_W
-#define _________________CARPALX_L2________________         KC_D,    KC_S,    KC_T,   KC_N,     KC_R
+#define _________________CARPALX_L1________________         KC_Q,    KC_G,    KC_P,    KC_L,    KC_W
+#define _________________CARPALX_L2________________         KC_D,    KC_S,    KC_T,    KC_N,    KC_R
 #define _________________CARPALX_L3________________         KC_Z,    KC_X,    KC_C,    KC_V,    KC_J
 
 #define _________________CARPALX_R1________________         KC_Y,    KC_F,    KC_U,    KC_B,    KC_SCLN
-#define _________________CARPALX_R2________________         KC_I,    KC_A,    KC_E,   KC_O,     KC_H
+#define _________________CARPALX_R2________________         KC_I,    KC_A,    KC_E,    KC_O,    KC_H
 #define _________________CARPALX_R3________________         KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH
 
 #define _________________DVORAK_L1_________________         KC_SCLN, KC_V,    KC_W,   KC_P,     KC_Y
