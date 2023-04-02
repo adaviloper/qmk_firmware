@@ -24,8 +24,8 @@ const uint16_t PROGMEM bspc_combo[] = {KC_L, KC_SCLN, COMBO_END};
 const uint16_t PROGMEM sentence_combo[] = {KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM question_combo[] = {KC_COMM, KC_SLSH, COMBO_END};
 const uint16_t PROGMEM exclamation_combo[] = {KC_Z, KC_COMM, COMBO_END};
-const uint16_t PROGMEM next_field_combo[] = {KC_W, KC_E, COMBO_END};
-const uint16_t PROGMEM prev_field_combo[] = {KC_E, KC_R, COMBO_END};
+const uint16_t PROGMEM prev_field_combo[] = {KC_COMM, KC_W, COMBO_END};
+const uint16_t PROGMEM next_field_combo[] = {KC_COMM, KC_E, COMBO_END};
 
 combo_t key_combos[] = {
     [COMBO_ENT_L] = COMBO(ent_l_combo, KC_ENT),
