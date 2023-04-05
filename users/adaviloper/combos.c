@@ -37,7 +37,7 @@ combo_t key_combos[] = {
 #endif
 
 // Complex combos
-[COMBO_SENTENCE] = COMBO_ACTION(sentence_combo),
+    [COMBO_SENTENCE] = COMBO_ACTION(sentence_combo),
     [COMBO_QUESTION] = COMBO_ACTION(question_combo),
     [COMBO_EXCLAMATION] = COMBO_ACTION(exclamation_combo),
 };

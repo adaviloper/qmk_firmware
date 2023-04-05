@@ -84,6 +84,14 @@
 #define _________________GIT_R3____________________         _______, _______, _______, _______, _______
 #endif
 
+#define _________________RAISE_L1__________________         KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_SLSH
+#define _________________RAISE_L2__________________         KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_ASTR
+#define _________________RAISE_L3__________________         KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_MINS
+
+#define _________________RAISE_R1__________________         KC_COLN, KC_7,    KC_8,    KC_9,    KC_0
+#define _________________RAISE_R2__________________         KC_DLR,  KC_4,    KC_5,    KC_6,    KC_PLUS
+#define _________________RAISE_R3__________________         KC_0,    KC_1,    KC_2,    KC_3,    KC_DOT
+
 #define _________________SYMBOL_L1_________________         KC_GRV,  KC_LABK, KC_RABK, KC_DQUO, KC_PERC
 #define _________________SYMBOL_L2_________________         KC_HASH, KC_MINS, KC_PLUS, KC_EQL,  KC_CIRC
 #define _________________SYMBOL_L3_________________         KC_EXLM, KC_SLSH, KC_ASTR, KC_BSLS, KC_TILD
