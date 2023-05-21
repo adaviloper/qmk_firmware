@@ -43,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,  _________________LAYOUT_L1_________________,                     _________________LAYOUT_R1_________________, KC_NO,
         KC_DEL,  _________________LAYOUT_L2_________________,                     _________________LAYOUT_R2_________________, KC_QUOT,
         OSM_MEH, _________________LAYOUT_L3_________________, KC_LBRC,   KC_RBRC, _________________LAYOUT_R3_________________, OSM_HYP,
-                                   OS_SNIP, KC_NO,   LT_SMES, LT_REP,    LT_FUNC, RAISE,   KC_NO,   ADJUST
+                                   __________THUMB_4_KEY_L___________,    __________THUMB_4_KEY_R___________
     ),
     [_MAC_ALT] = LAYOUT_base_mac_wrapper(
         _______, _________________NUMBER_L0_________________,                     _________________NUMBER_R0_________________, _______,
@@ -126,7 +126,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _________________FUNC_L1___________________,                     _________________FUNC_R1___________________, _______,
         VI_DEL,  _________________FUNC_L2___________________,                     _________________FUNC_R2___________________, _______,
         _______, _________________FUNC_L3___________________, _______,   _______, _________________FUNC_R3___________________, _______,
-                                   _______, _______, _______, _______,   _______, _______, KC_MAKE, _______
+                                   QK_BOOT, _______, _______, _______,   _______, _______, KC_MAKE, _______
     ),
     [_ADJUST] = LAYOUT_wrapper(
         XXXXXXX, MAC,     WINDOWS, GAMING,  ART,     XXXXXXX,                     QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
