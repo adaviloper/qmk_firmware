@@ -126,14 +126,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _________________FUNC_L1___________________,                     _________________FUNC_R1___________________, _______,
         VI_DEL,  _________________FUNC_L2___________________,                     _________________FUNC_R2___________________, _______,
         _______, _________________FUNC_L3___________________, _______,   _______, _________________FUNC_R3___________________, _______,
-                                   QK_BOOT, _______, _______, _______,   _______, _______, KC_MAKE, _______
+                                   _______, _______, _______, _______,   _______, _______, KC_MAKE, _______
     ),
     [_ADJUST] = LAYOUT_wrapper(
         XXXXXXX, MAC,     WINDOWS, GAMING,  ART,     XXXXXXX,                     QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         XXXXXXX, M_ALT,   W_ALT,   XXXXXXX, XXXXXXX, XXXXXXX,                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                     XXXXXXX, XXXXXXX, XXXXXXX, RGB_HUI, RGB_SAI, RGB_VAI,
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   XXXXXXX, XXXXXXX, RGB_M_R, RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD,
-                                   _______, _______, _______, _______,   _______, _______, _______, _______
+                                   QK_BOOT, _______, _______, _______,   _______, _______, _______, QK_BOOT
     )
 };
 
