@@ -118,7 +118,7 @@ bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
 #endif
-        case PR_TTLE:
+        case PR_TLE1:
             if (record->event.pressed) {
                 register_code(KC_LGUI);
                 tap_code(KC_LEFT);
@@ -129,7 +129,27 @@ bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
                 tap_code(KC_DEL);
                 unregister_code(KC_LALT);
                 tap_code(KC_DEL);
-                SEND_STRING("[GN-");
+                SEND_STRING("[LPR-");
+                register_code(KC_LALT);
+                tap_code(KC_RGHT);
+                tap_code(KC_DEL);
+                unregister_code(KC_LALT);
+                SEND_STRING("] - ");
+            }
+            // Task/gn XXXXX/some description
+            return false;
+        case PR_TLE2:
+            if (record->event.pressed) {
+                register_code(KC_LGUI);
+                tap_code(KC_LEFT);
+                unregister_code(KC_LGUI);
+                register_code(KC_LALT);
+                tap_code(KC_DEL);
+                tap_code(KC_DEL);
+                tap_code(KC_DEL);
+                unregister_code(KC_LALT);
+                tap_code(KC_DEL);
+                SEND_STRING("[RET-");
                 register_code(KC_LALT);
                 tap_code(KC_RGHT);
                 tap_code(KC_DEL);

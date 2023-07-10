@@ -37,7 +37,7 @@ bool process_vi_commands_adaviloper(uint16_t keycode, keyrecord_t *record) {
             return false;
         case VI_DEL:
             if (eeconfig_read_default_layer() == 1UL<<_MAC || eeconfig_read_default_layer() == 1UL<<_MAC_ALT) {
-                register_vi_keycode(A(KC_DEL), record);
+                register_vi_keycode(C(KC_DEL), record);
             } else {
                 register_vi_keycode(C(KC_DEL), record);
             }

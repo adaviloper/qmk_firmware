@@ -33,7 +33,8 @@ enum keycodes {
   LIGHTS,
 #endif
   ADJUST,
-  PR_TTLE,
+  PR_TLE1,
+  PR_TLE2,
 #ifdef CASE_MODES_ENABLE
   KC_MOCK,
   CAP_WRD,
