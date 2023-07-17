@@ -7,37 +7,37 @@ enum lily58_keycodes {
     KC_MAKE = PERSONAL_SAFE_RANGE,
 };
 
-#define LAYOUT_lulu_wrapper(...) LAYOUT(__VA_ARGS__)
-#define LAYOUT_lulu_base_mac( \
+#define LAYOUT_lily58_wrapper(...) LAYOUT(__VA_ARGS__)
+#define LAYOUT_lily58_base_mac( \
         k00, k01, k02, k03, k04, k05,           k08, k09, k0a, k0b, k0c, k0d, \
         k10, k11, k12, k13, k14, k15,           k18, k19, k1a, k1b, k1c, k1d, \
         k20, k21, k22, k23, k24, k25,           k28, k29, k2a, k2b, k2c, k2d, \
         k30, k31, k32, k33, k34, k35, k36, k37, k38, k39, k3a, k3b, k3c, k3d, \
                        k43, k44, k45, k46, k47, k48, k49, k4a \
     ) \
-    LAYOUT_lulu_wrapper( \
+    LAYOUT_lily58_wrapper( \
         k00, k01, k02, k03, k04, k05,           k08, k09, k0a, k0b, k0c, k0d, \
         k10, k11, k12, k13, k14, k15,           k18, k19, k1a, k1b, k1c, k1d, \
         k20, SFT_T(k21), GUI_T(k22), CTL_T(k23), ALT_T(k24), LT(_GIT, k25),   LT(_GIT, k28), ALT_T(k29), CTL_T(k2a), GUI_T(k2b), SFT_T(k2c), k2d, \
         k30, k31, k32, k33, k34, k35, k36, k37, k38, k39, k3a, k3b, k3c, k3d, \
                        k43, k44, k45, k46, k47, k48, k49, k4a \
     )
-#define LAYOUT_lulu_base_win( \
+#define LAYOUT_lily58_base_win( \
         k00, k01, k02, k03, k04, k05,           k08, k09, k0a, k0b, k0c, k0d, \
         k10, k11, k12, k13, k14, k15,           k18, k19, k1a, k1b, k1c, k1d, \
         k20, k21, k22, k23, k24, k25,           k28, k29, k2a, k2b, k2c, k2d, \
         k30, k31, k32, k33, k34, k35, k36, k37, k38, k39, k3a, k3b, k3c, k3d, \
                        k43, k44, k45, k46, k47, k48, k49, k4a \
     ) \
-    LAYOUT_lulu_wrapper( \
+    LAYOUT_lily58_wrapper( \
         k00, k01, k02, k03, k04, k05,           k08, k09, k0a, k0b, k0c, k0d, \
         k10, k11, k12, k13, k14, k15,           k18, k19, k1a, k1b, k1c, k1d, \
         k20, SFT_T(k21), CTL_T(k22), GUI_T(k23), ALT_T(k24), LT(_GIT, k25),   LT(_GIT, k28), ALT_T(k29), GUI_T(k2a), CTL_T(k2b), SFT_T(k2c), k2d, \
         k30, k31, k32, k33, k34, k35, k36, k37, k38, k39, k3a, k3b, k3c, k3d, \
                        k43, k44, k45, k46, k47, k48, k49, k4a \
     )
-#define LAYOUT_base_mac_wrapper(...) LAYOUT_lulu_base_mac(__VA_ARGS__)
-#define LAYOUT_base_win_wrapper(...) LAYOUT_lulu_base_win(__VA_ARGS__)
+#define LAYOUT_base_mac_wrapper(...) LAYOUT_lily58_base_mac(__VA_ARGS__)
+#define LAYOUT_base_win_wrapper(...) LAYOUT_lily58_base_win(__VA_ARGS__)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      /* MAC
@@ -54,22 +54,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       *                   |      |      |      |/       /         \      \ |      |      |      |
       *                   `----------------------------'           '------''--------------------'
       */
-     [_MAC] = LAYOUT_base_mac_wrapper(
+    [_MAC] = LAYOUT_base_mac_wrapper(
           KC_ESC,  _________________NUMBER_L0_________________,                     _________________NUMBER_R0_________________, KC_BSPC,
-          KC_TAB,  _________________MAC_L1____________________,                     _________________MAC_R1____________________, KC_NO,
-          KC_DEL,  _________________MAC_L2____________________,                     _________________MAC_R2____________________, KC_QUOT,
-          OSM_MEH, _________________MAC_L3____________________, KC_LBRC,   KC_RBRC, _________________MAC_R3____________________, OSM_HYP,
-                                     OS_SNIP, ADJUST, LT_SMES, LT_SYEN,   LT_FUNC, RAISE,   KC_MAKE, ADJUST
+          KC_TAB,  _________________LAYOUT_L1_________________,                     _________________LAYOUT_R1_________________, KC_BSPC,
+          KC_DEL,  _________________LAYOUT_L2_________________,                     _________________LAYOUT_R2_________________, KC_QUOT,
+          OSM_MEH, _________________LAYOUT_L3_________________, KC_LBRC,   KC_RBRC, _________________LAYOUT_R3_________________, OSM_HYP,
+                                     __________THUMB_4_KEY_L___________,    __________THUMB_4_KEY_R___________
     ),
-     [_WINDOWS] = LAYOUT_base_win_wrapper(
+    [_WINDOWS] = LAYOUT_base_win_wrapper(
           _______, _________________NUMBER_L0_________________,                     _________________NUMBER_R0_________________, _______,
-          _______, _________________WINDOWS_L1________________,                     _________________WINDOWS_R1________________, _______,
-          _______, _________________WINDOWS_L2________________,                     _________________WINDOWS_R2________________, _______,
-          _______, _________________WINDOWS_L3________________, _______,   _______, _________________WINDOWS_R3________________, _______,
+          _______, _________________LAYOUT_L1_________________,                     _________________LAYOUT_R1_________________, _______,
+          _______, _________________LAYOUT_L2_________________,                     _________________LAYOUT_R2_________________, _______,
+          _______, _________________LAYOUT_L3_________________, _______,   _______, _________________LAYOUT_R3_________________, _______,
                                      _______, _______, _______, _______,   _______, _______, _______, _______
     ),
 #ifdef GAMING_ENABLE
-     [_GAMING] = LAYOUT_wrapper(
+     [_GAMING] = LAYOUT_lily58_wrapper(
           KC_ESC,  _________________GAMING_L0_________________,                     _________________GAMING_R0_________________, _______,
           KC_TAB,  _________________GAMING_L1_________________,                     _________________GAMING_R1_________________, _______,
           KC_LCTL, _________________GAMING_L2_________________,                     _________________GAMING_R2_________________, _______,
@@ -78,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 #endif
 #ifdef GIT_ENABLE
-     [_GIT] = LAYOUT_wrapper(
+    [_GIT] = LAYOUT_lily58_wrapper(
           _______, _______, _______, _______, _______, _______,                     _______, _______, _______, _______, _______, _______,
           _______, _________________GIT_L1____________________,                     _________________GIT_R1____________________, _______,
           _______, _________________GIT_L2____________________,                     _________________GIT_R2____________________, _______,
@@ -86,29 +86,29 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                      _______, _______, _______, _______,   _______, _______, _______, _______
     ),
 #endif
-    [_SYMBOL] = LAYOUT_wrapper(
-        _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______,
-        KC_F1,   _________________SYMBOL_L1_________________,                   _________________SYMBOL_R1_________________, _______,
-        KC_GRV,  _________________SYMBOL_L2_________________,                   _________________SYMBOL_R2_________________, TRIP_EQ,
-        _______, _________________SYMBOL_L3_________________, _______, _______, _________________SYMBOL_R3_________________, DBL_EQ,
-                                   _______, _______, _______, _______, _______,  _______, _______, _______
-    ),
-    [_RAISE] = LAYOUT_wrapper(
+    [_SYMBOL] = LAYOUT_lily58_wrapper(
         _______, _______, _______, _______, _______, _______,                     _______, _______, _______, _______, _______, _______,
-        KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                        KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS,
-        KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                       KC_DLR,  KC_4,    KC_5,    KC_6,    KC_PLUS, KC_ASTR,
-        KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,   _______, _______,  KC_0,    KC_1,    KC_2,    KC_3,    KC_DOT,  KC_SLSH,
-                                   _______, _______, _______,  _______, _______,  _______, _______, _______
+        _______, _________________SYMBOL_L1_________________,                     _________________SYMBOL_R1_________________, _______,
+        _______, _________________SYMBOL_L2_________________,                     _________________SYMBOL_R2_________________, TRIP_EQ,
+        _______, _________________SYMBOL_L3_________________, _______,   _______, _________________SYMBOL_R3_________________, DBL_EQ,
+                                   _______, _______, _______, _______,   _______, _______, _______, _______
+    ),
+    [_RAISE] = LAYOUT_lily58_wrapper(
+        _______, _______, _______, _______, _______, _______,                     _______, _______, _______, _______, _______, _______,
+        _______, _________________RAISE_L1__________________,                     _________________RAISE_R1__________________, KC_MINS,
+        _______, _________________RAISE_L2__________________,                     _________________RAISE_R2__________________, KC_ASTR,
+        _______, _________________RAISE_L3__________________, _______,   _______, _________________RAISE_R3__________________, KC_SLSH,
+                                   _______, _______, _______, _______,   _______, _______, _______, _______
     ),
 #ifdef ART_ENABLE
-    [_ART] = LAYOUT_wrapper(
+    [_ART] = LAYOUT_lily58_wrapper(
         KC_ESC,  KC_F13,  KC_F14,  KC_F15,  KC_F16,  KC_F17,                      KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC,
         KC_LALT, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                        KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_NO,
         KC_LSFT, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                        KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
         KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    _______,  _______,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, OSM(MOD_HYPR),
                                    _______, _______, KC_SPC,  ART2,     _______,  _______, _______, _______
     ),
-    [_ART2] = LAYOUT_wrapper(
+    [_ART2] = LAYOUT_lily58_wrapper(
         _______, KC_F18,  KC_F19,  KC_F20,  KC_F21,  KC_F22,                      KC_5,    KC_4,    KC_3,    KC_2,    KC_1,    KC_ESC,
         _______, KC_P,    KC_O,    KC_I,    KC_U,    KC_Y,                        KC_T,    KC_R,    KC_E,    KC_W,    KC_Q,    KC_LALT,
         _______, KC_SCLN, KC_L,    KC_K,    KC_J,    KC_H,                        KC_G,    KC_F,    KC_D,    KC_S,    KC_A,    KC_LSFT,
@@ -116,26 +116,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                    _______, _______, KC_SPC,  _______,  _______,  _______, _______, _______
     ),
 #endif
-    [_SYSTEM] = LAYOUT(
-        _______, _______, _______, _______, _______, _______,                     _______, _______, _______, _______, _______, _______,
-        _______, _______, OS_CTAB, _______, OS_RFRS, PR_TTLE,                     OS_REDO, _______, _______, _______, _______, _______,
-        _______, OS_ALL,  OS_SAVE, _______, OS_FIND, _______,                     KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______,
-        _______, OS_UNDO, OS_CUT,  OS_COPY, OS_PSTE, CST_CSE,  _______, _______,  _______, CAP_WRD, CAMEL,   SNAKE,   KEBAB,   _______,
-                                   _______, _______, _______,  _______, _______,  _______, _______, _______
+    [_SYSTEM] = LAYOUT_lily58_wrapper(
+        _______, _________________SYSTEM_L0_________________,                     _________________SYSTEM_R0_________________, _______,
+        OS_NAPP, _________________SYSTEM_L1_________________,                     _________________SYSTEM_R1_________________, _______,
+        _______, _________________SYSTEM_L2_________________,                     _________________SYSTEM_R2_________________, _______,
+        _______, _________________SYSTEM_L3_________________, _______,   _______, _________________SYSTEM_R3_________________, _______,
+                                   _______, _______, _______, _______,   _______, _______, _______, _______
     ),
-    [_FUNC] = LAYOUT(
-        _______, _______, _______, _______, _______, _______,                     _______, _______, _______, _______, _______, VI_BSPC,
-        _______, _______, VI_WORD, _______, _______, _______,                     _______, KC_PGUP, _______, _______, _______, _______,
-        VI_DEL,  _______, _______, KC_PGDN, _______, _______,                     KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______,
-        _______, _______, _______, _______, _______, VI_BWRD,  _______, _______,  _______, _______, _______, _______, _______, _______,
-                                   _______, _______, _______,  _______, _______,  _______, _______, _______
+    [_FUNC] = LAYOUT_lily58_wrapper(
+        _______, _________________FUNC_L0___________________,                     _________________FUNC_R0___________________, VI_BSPC,
+        _______, _________________FUNC_L1___________________,                     _________________FUNC_R1___________________, VI_BSPC,
+        VI_DEL,  _________________FUNC_L2___________________,                     _________________FUNC_R2___________________, _______,
+        _______, _________________FUNC_L3___________________, _______,   _______, _________________FUNC_R3___________________, _______,
+                                   _______, _______, _______, _______,   _______, _______, KC_MAKE, _______
     ),
-    [_ADJUST] = LAYOUT(
-        XXXXXXX, MAC,     WINDOWS, GAMING,  ART,     XXXXXXX,                   QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                     XXXXXXX, XXXXXXX, RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI,
-        KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  XXXXXXX, XXXXXXX, XXXXXXX, RGB_M_R, RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD,
-                                   _______, _______, _______, _______, _______,  _______, _______, _______
+    [_ADJUST] = LAYOUT_lily58_wrapper(
+        XXXXXXX, MAC,     WINDOWS, GAMING,  ART,     XXXXXXX,                     QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, M_ALT,   W_ALT,   XXXXXXX, XXXXXXX, XXXXXXX,                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                     XXXXXXX, XXXXXXX, XXXXXXX, RGB_HUI, RGB_SAI, RGB_VAI,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   XXXXXXX, XXXXXXX, RGB_M_R, RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD,
+                                   QK_BOOT, _______, _______, _______,   _______, _______, _______, QK_BOOT
     )
 };
 
