@@ -15,64 +15,65 @@
 #define LT_REP  LT(_SYSTEM, KC_F1)
 
 enum keycodes {
-  MAC = SAFE_RANGE,
-  M_ALT,
-  WINDOWS,
-  W_ALT,
+    MAC = SAFE_RANGE,
+    M_ALT,
+    WINDOWS,
+    W_ALT,
 #ifdef GAMING_ENABLE
-  GAMING,
+    GAMING,
 #endif
-  RAISE,
+    RAISE,
 #ifdef ART_ENABLE
-  ART,
-  ART2,
+    ART,
+    ART2,
 #endif
-  FUNC,
-  FUNC2,
+    FUNC,
+    FUNC2,
 #ifdef RGBLIGHT_LAYERS
-  LIGHTS,
+    LIGHTS,
 #endif
-  ADJUST,
-  PR_TLE1,
-  PR_TLE2,
+    ADJUST,
+    PR_TLE1,
+    PR_TLE2,
 #ifdef CASE_MODES_ENABLE
-  KC_MOCK,
-  CAP_WRD,
-  CAMEL,
-  SNAKE,
-  KEBAB,
-  CST_CSE,
+    KC_MOCK,
+    CAP_WRD,
+    CAMEL,
+    SNAKE,
+    KEBAB,
+    CST_CSE,
 #endif
 #ifdef GIT_ENABLE
-  GIT_ACP,
-  GIT_BCK,
-  GIT_GCP,
-  GIT_HRD,
-  GIT_RST,
-  GIT_SFT,
+    GIT_ACP,
+    GIT_BCK,
+    GIT_GCP,
+    GIT_HRD,
+    GIT_RST,
+    GIT_SFT,
 #endif
-  RE_PEAT,
-  DBL_EQ,
-  TRIP_EQ,
-  DBL_CLN,
-  OS_ALL,  // A
-  OS_COPY, // C
-  OS_FIND, // F
-  OS_NAPP, // F
-  OS_SPEC, // Inspector
-  OS_URL,  // L
-  OS_RFRS, // R
-  OS_SAVE, // S
-  OS_CTAB, // W
-  OS_PSTE, // V
-  OS_CUT,  // X
-  OS_REDO, // Y
-  OS_UNDO, // Z
-  OS_SNIP,
-  VI_BWRD, // B
-  VI_WORD, // W
-  VI_BSPC, // Backspace
-  VI_DEL,  // Delete
-  PERSONAL_SAFE_RANGE,
+    RE_PEAT,
+    DBL_EQ,
+    TRIP_EQ,
+    DBL_CLN,
+    OS_ALL,
+    OS_COPY,
+    OS_FIND,
+    OS_NAPP,
+    OS_NWIN,
+    OS_SPEC,
+    OS_URL,
+    OS_RFRS,
+    OS_SAVE,
+    OS_CTAB,
+    OS_PSTE,
+    OS_CUT,
+    OS_REDO,
+    OS_UNDO,
+    OS_SNIP,
+    VI_BWRD,
+    VI_WORD,
+    VI_BSPC,
+    VI_DEL,
+    PERSONAL_SAFE_RANGE,
 };
 
