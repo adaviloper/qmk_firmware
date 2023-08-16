@@ -164,11 +164,6 @@ bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
                 enable_caps_mock();
             }
             return false;
-        case CAP_WRD:
-            if (record->event.pressed) {
-                enable_caps_word();
-            }
-            return false;
         case CAMEL:
             if (record->event.pressed) {
                 enable_xcase_with(OSM(MOD_LSFT));

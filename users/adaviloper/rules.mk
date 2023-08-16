@@ -4,9 +4,6 @@ ifdef CASE_MODES_ENABLE
   SRC += case_modes.c
   SRC += caps_mock.c
 endif
-ifdef COMBO_ENABLE
-  SRC += combos.c
-endif
 ifdef ENCODER_ENABLE
   SRC += encoders.c
 endif

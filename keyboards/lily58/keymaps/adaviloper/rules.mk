@@ -10,5 +10,7 @@ TAP_DANCE_ENABLE = yes
 # userspace rules
 ART_ENABLE = yes
 CASE_MODES_ENABLE = yes
+CAPS_WORD_ENABLE = yes
 GAMING_ENABLE = yes
 GIT_ENABLE = yes
+INTROSPECTION_KEYMAP_C = combos.c

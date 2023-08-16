@@ -29,7 +29,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define ART_ENABLE
 #define CASE_MODES_ENABLE
 #define CAPS_WORD_IDLE_TIMEOUT 5000
-#define IGNORE_MOD_TAP_INTERRUPT
 #define GAMING_ENABLE
 #define GIT_ENABLE
 #define TAPPING_TERM 200

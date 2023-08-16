@@ -108,7 +108,7 @@
 #define _________________SYSTEM_R0_________________         _______, _______, _______, _______, _______
 #define _________________SYSTEM_R1_________________         OS_REDO, _______, _______, _______, _______
 #define _________________SYSTEM_R2_________________         KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______
-#define _________________SYSTEM_R3_________________         KC_MOCK, CAP_WRD, CAMEL,   SNAKE,   KEBAB
+#define _________________SYSTEM_R3_________________         _______, CW_TOGG, CAMEL,   SNAKE,   KEBAB
 
 #define ______THUMB_3_KEY_L______                                    OS_SNIP, LT_SMES, LT_REP
 #define __________THUMB_4_KEY_L___________                  OS_SNIP, KC_NO,   LT_SMES, LT_REP
