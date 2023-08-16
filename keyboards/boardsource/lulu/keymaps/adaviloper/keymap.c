@@ -1,7 +1,7 @@
 #include "adaviloper.h"
 
 enum lulu_keycodes {
-    KC_MAKE = PERSONAL_SAFE_RANGE,
+    KC_MAKE = NEW_SAFE_RANGE,
 };
 
 #define LAYOUT_lulu_wrapper(...) LAYOUT(__VA_ARGS__)

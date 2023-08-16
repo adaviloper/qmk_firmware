@@ -15,7 +15,7 @@
 #define LT_REP  LT(_SYSTEM, KC_F1)
 
 enum keycodes {
-    MAC = SAFE_RANGE,
+    MAC = QK_KB_0,
     M_ALT,
     WINDOWS,
     W_ALT,
@@ -74,6 +74,6 @@ enum keycodes {
     VI_WORD,
     VI_BSPC,
     VI_DEL,
-    PERSONAL_SAFE_RANGE,
+    NEW_SAFE_RANGE,
 };
 

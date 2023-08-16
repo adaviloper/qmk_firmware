@@ -4,7 +4,7 @@
 extern uint8_t is_master;
 
 enum lily58_keycodes {
-    KC_MAKE = PERSONAL_SAFE_RANGE,
+    KC_MAKE = NEW_SAFE_RANGE,
 };
 
 #define LAYOUT_lily58_wrapper(...) LAYOUT(__VA_ARGS__)
