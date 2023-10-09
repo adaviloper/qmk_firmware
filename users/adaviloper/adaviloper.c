@@ -158,6 +158,26 @@ bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
             }
             // Task/gn XXXXX/some description
             return false;
+        case PR_TLE3:
+            if (record->event.pressed) {
+                register_code(KC_LGUI);
+                tap_code(KC_LEFT);
+                unregister_code(KC_LGUI);
+                register_code(KC_LALT);
+                tap_code(KC_DEL);
+                tap_code(KC_DEL);
+                tap_code(KC_DEL);
+                unregister_code(KC_LALT);
+                tap_code(KC_DEL);
+                SEND_STRING("[UTTT-");
+                register_code(KC_LALT);
+                tap_code(KC_RGHT);
+                tap_code(KC_DEL);
+                unregister_code(KC_LALT);
+                SEND_STRING("] - ");
+            }
+            // Task/gn XXXXX/some description
+            return false;
 #ifdef CASE_MODES_ENABLE
         case KC_MOCK:
             if (record->event.pressed) {

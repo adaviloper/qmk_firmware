@@ -35,6 +35,7 @@ enum keycodes {
     ADJUST,
     PR_TLE1,
     PR_TLE2,
+    PR_TLE3,
 #ifdef CASE_MODES_ENABLE
     KC_MOCK,
     CAP_WRD,
