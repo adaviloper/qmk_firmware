@@ -129,12 +129,12 @@ bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
                 tap_code(KC_DEL);
                 unregister_code(KC_LALT);
                 tap_code(KC_DEL);
-                SEND_STRING("[LPR-");
+                SEND_STRING("LPR-");
                 register_code(KC_LALT);
                 tap_code(KC_RGHT);
                 tap_code(KC_DEL);
                 unregister_code(KC_LALT);
-                SEND_STRING("] - ");
+                SEND_STRING(" - ");
             }
             // Task/gn XXXXX/some description
             return false;
@@ -149,12 +149,12 @@ bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
                 tap_code(KC_DEL);
                 unregister_code(KC_LALT);
                 tap_code(KC_DEL);
-                SEND_STRING("[RET-");
+                SEND_STRING("RET-");
                 register_code(KC_LALT);
                 tap_code(KC_RGHT);
                 tap_code(KC_DEL);
                 unregister_code(KC_LALT);
-                SEND_STRING("] - ");
+                SEND_STRING(" - ");
             }
             // Task/gn XXXXX/some description
             return false;
