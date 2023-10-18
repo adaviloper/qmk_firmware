@@ -9,6 +9,7 @@ enum combos {
     COMBO_SENTENCE,
     COMBO_QUESTION,
     COMBO_EXCLAMATION,
+    COMBO_THE,
     COMBO_LENGTH
 };
 
@@ -20,6 +21,7 @@ const uint16_t PROGMEM ent_r_combo[]       = {KC_M,    KC_COMM, COMBO_END};
 const uint16_t PROGMEM sentence_combo[]    = {KC_COMM, KC_DOT,  COMBO_END};
 const uint16_t PROGMEM question_combo[]    = {KC_COMM, KC_SLSH, COMBO_END};
 const uint16_t PROGMEM exclamation_combo[] = {KC_Z,    KC_COMM, COMBO_END};
+const uint16_t PROGMEM the_combo[]         = {KC_COMM, KC_T,    COMBO_END};
 
 combo_t key_combos[] = {
     [COMBO_ENT_L]       = COMBO(ent_l_combo, KC_ENT),
@@ -29,7 +31,9 @@ combo_t key_combos[] = {
     [COMBO_SENTENCE]    = COMBO_ACTION(sentence_combo),
     [COMBO_QUESTION]    = COMBO_ACTION(question_combo),
     [COMBO_EXCLAMATION] = COMBO_ACTION(exclamation_combo),
+    [COMBO_THE]         = COMBO_ACTION(the_combo),
 };
+
 
 void process_combo_event(uint16_t combo_index, bool pressed) {
     switch (combo_index) {
@@ -52,6 +56,13 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
                 tap_code16(KC_EXLM);
                 tap_code16(KC_SPC);
                 set_oneshot_mods(MOD_LSFT);
+            }
+            break;
+        case COMBO_THE:
+            if (pressed) {
+                tap_code16(KC_T);
+                tap_code16(KC_H);
+                tap_code16(KC_E);
             }
             break;
     }
