@@ -69,6 +69,8 @@ enum keycodes {
     OS_PSTE,
     OS_CUT,
     OS_REDO,
+    OS_SBSP,
+    OS_SDEL,
     OS_UNDO,
     OS_SNIP,
     VI_BWRD,
