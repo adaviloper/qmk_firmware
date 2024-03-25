@@ -149,21 +149,11 @@ bool process_os_commands_adaviloper(uint16_t keycode, keyrecord_t *record) {
         case OS_SBSP:
             if (record->event.pressed) {
                 if (mod_state & MOD_MASK_SHIFT) {
-                    tap_code16(KC_BSPC);
-                    tap_code16(KC_BSPC);
-                    tap_code16(KC_BSPC);
+                    tap_code(KC_BSPC);
+                    tap_code(KC_BSPC);
+                    tap_code(KC_BSPC);
                 }
-                tap_code16(KC_BSPC);
-            }
-            return false;
-        case OS_SDEL:
-            if (record->event.pressed) {
-                if (mod_state & MOD_MASK_SHIFT) {
-                    tap_code(KC_DEL);
-                    tap_code(KC_DEL);
-                    tap_code(KC_DEL);
-                }
-                tap_code(KC_DEL);
+                tap_code(KC_BSPC);
             }
             return false;
     }
