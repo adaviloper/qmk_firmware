@@ -13,6 +13,7 @@ void register_os_keycode(uint16_t keycode, keyrecord_t *record) {
 }
 
 bool process_os_commands_adaviloper(uint16_t keycode, keyrecord_t *record) {
+    uint8_t mod_state = get_mods();
     switch (keycode) {
         case OS_ALL:
             if (record->event.pressed) {
@@ -143,6 +144,16 @@ bool process_os_commands_adaviloper(uint16_t keycode, keyrecord_t *record) {
                 } else {
                     tap_code16(G(S(KC_S)));
                 }
+            }
+            return false;
+        case OS_SBSP:
+            if (record->event.pressed) {
+                if (mod_state & MOD_MASK_SHIFT) {
+                    tap_code(KC_BSPC);
+                    tap_code(KC_BSPC);
+                    tap_code(KC_BSPC);
+                }
+                tap_code(KC_BSPC);
             }
             return false;
     }
