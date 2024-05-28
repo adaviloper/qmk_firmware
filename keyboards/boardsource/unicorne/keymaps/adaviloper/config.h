@@ -12,4 +12,3 @@
 #define SPLIT_WPM_ENABLE
 #define TAPPING_TERM 200
 #define RGBLED_NUM 48
-
