@@ -103,7 +103,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_SYSTEM] = LAYOUT_unicorne_wrapper(
         OS_NAPP, _________________SYSTEM_L1_________________,                     _________________SYSTEM_R1_________________, _______,
         _______, _________________SYSTEM_L2_________________,                     _________________SYSTEM_R2_________________, _______,
-        _______, _________________SYSTEM_L3_________________,                     _________________SYSTEM_R3_________________, _______,
+        OS_NWIN, _________________SYSTEM_L3_________________,                     _________________SYSTEM_R3_________________, _______,
                                    _______, _______, _______,                     _______, _______, _______
     ),
     [_FUNC] = LAYOUT_unicorne_wrapper(
@@ -131,4 +131,34 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return false;
     };
     return true;
+}
+
+bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
+    switch(get_highest_layer(layer_state|default_layer_state)) {
+        case _MAC:
+            rgb_matrix_set_color_all(202, 215, 235);
+            break;
+        case _WINDOWS:
+            rgb_matrix_set_color_all(41, 109, 204);
+            break;
+        case _GAMING:
+            rgb_matrix_set_color_all(204, 41, 68);
+            break;
+        case _ART:
+        case _ART2:
+            rgb_matrix_set_color_all(138, 12, 201);
+            break;
+        case _GIT:
+            rgb_matrix_set_color_all(79, 142, 50);
+            break;
+        case _SYMBOL:
+            rgb_matrix_set_color_all(16, 156, 39);
+            break;
+        case _RAISE:
+            rgb_matrix_set_color_all(16, 156, 39);
+            break;
+        default:
+            break;
+    }
+    return false;
 }
