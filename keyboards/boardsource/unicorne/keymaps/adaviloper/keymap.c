@@ -63,7 +63,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,  _________________GAMING_L1_________________,                     _________________GAMING_R1_________________, _______,
         KC_LCTL, _________________GAMING_L2_________________,                     _________________GAMING_R2_________________, _______,
         KC_LSFT, _________________GAMING_L3_________________,                     _________________GAMING_R3_________________, _______,
-                                   KC_LGUI, KC_LALT, KC_SPC,                      _______, _______, _______
+                                   KC_LGUI, LT_GALT, KC_SPC,                      _______, _______, _______
+    ),
+    [_GAMING2] = LAYOUT_unicorne_wrapper(
+        KC_ESC,  _________________GAMING2_L1________________,                     _________________GAMING_R1_________________, _______,
+        KC_I,    _________________GAMING2_L2________________,                     _________________GAMING_R2_________________, _______,
+        KC_M,    _________________GAMING2_L3________________,                     _________________GAMING_R3_________________, _______,
+                                   _______, _______, _______,                     _______, _______, _______
     ),
 #endif
 #ifdef GIT_ENABLE
@@ -143,6 +149,9 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
             break;
         case _GAMING:
             rgb_matrix_set_color_all(204, 41, 68);
+            break;
+        case _GAMING2:
+            rgb_matrix_set_color_all(255, 0, 255);
             break;
         case _ART:
         case _ART2:

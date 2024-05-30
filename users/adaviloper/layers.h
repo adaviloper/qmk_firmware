@@ -5,6 +5,7 @@ enum layers {
   _WINDOWS_ALT,
 #ifdef GAMING_ENABLE
   _GAMING,
+  _GAMING2,
 #endif
 #ifdef GIT_ENABLE
   _GIT,

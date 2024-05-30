@@ -13,6 +13,7 @@
 #define LT_FUNC LT(_FUNC, KC_SPC)
 #define LT_SYEN LT(_SYSTEM, KC_ENT)
 #define LT_REP  LT(_SYSTEM, KC_F1)
+#define LT_GALT LT(_GAMING2, KC_LALT)
 
 enum keycodes {
     MAC = QK_KB_0,
