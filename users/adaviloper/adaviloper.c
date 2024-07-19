@@ -132,7 +132,6 @@ bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
                 register_code(KC_LALT);
                 tap_code(KC_RGHT);
                 unregister_code(KC_LALT);
-                tap_code(KC_BSPC);
                 SEND_STRING(": ");
             }
             // Task/gn XXXXX/some description
@@ -151,7 +150,6 @@ bool process_record_user_adaviloper(uint16_t keycode, keyrecord_t *record) {
                 register_code(KC_LALT);
                 tap_code(KC_RGHT);
                 unregister_code(KC_LALT);
-                tap_code(KC_BSPC);
                 SEND_STRING(": ");
             }
             // Task/gn XXXXX/some description
